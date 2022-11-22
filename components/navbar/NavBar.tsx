@@ -1,5 +1,7 @@
+import styles from "./NavBar.module.css";
+
 const NavBar = () => {
-  return <nav>NavBar</nav>;
+  return <nav className={styles.container}>NavBar</nav>;
 };
 
 export default NavBar;
