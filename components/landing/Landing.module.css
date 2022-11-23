@@ -1,4 +1,20 @@
 .title {
   margin: 0;
   color: var(--terciary);
+  font-size: 5rem;
+  max-width: 650px;
+}
+
+.title__name {
+  color: var(--secondary);
+}
+
+.paragraph {
+  font-size: 2rem;
+  color: var(--terciary);
+  max-width: 650px;
+}
+
+.link {
+  color: var(--secondary);
 }
