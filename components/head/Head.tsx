@@ -18,7 +18,8 @@ const HeadComponent = () => {
         content="Hurray!! Yes Social Media Preview is Working"
       />
       <meta property="og:image" content={"url of image"} />
-      <link rel="icon" href="/code.svg" />
+      {/* <link rel="icon" href="/code.svg" /> */}
+      <link rel="icon" href="/favicon.ico" />
     </Head>
   );
 };
