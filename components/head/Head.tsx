@@ -16,7 +16,10 @@ const HeadComponent = () => {
         property="og:description"
         content="Andres Alexander Andrade Sanchez, Fullstack software developer based in Mississauga, Ontario - Canada"
       />
-      <meta property="og:image" content="/preview.jpg" />
+      <meta
+        property="og:image"
+        content="https://andres-andrade.dev/preview.jpg"
+      />
       <link rel="icon" href="/code.png" />
     </Head>
   );
