@@ -1,7 +1,7 @@
 :root {
   --primary: #0070d9;
   --secondary: #f9c00b;
-  --terciary: white;
+  --tertiary: white;
 }
 
 html,
@@ -10,7 +10,10 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  overflow-y: scroll;
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
   scroll-behavior: smooth;
+  scrollbar-width: none; /* Firefox */
 }
 
 a {
@@ -25,6 +28,7 @@ a {
 /* width */
 ::-webkit-scrollbar {
   width: 10px;
+  display: none; /* Safari and Chrome */
 }
 
 /* Track */

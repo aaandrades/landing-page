@@ -1,0 +1,33 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--tertiary);
+}
+
+.container__section {
+  width: 50%;
+}
+.container__item {
+  margin-bottom: 2rem;
+}
+
+.title {
+  color: var(--secondary);
+  font-size: 4rem;
+  margin: 0;
+}
+
+.title__secondary {
+  color: var(--tertiary);
+}
+
+.paragraph {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.paragraph__secondary {
+  font-size: 2rem;
+  /* margin: 0; */
+}

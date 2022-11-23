@@ -1,6 +1,6 @@
 .title {
   margin: 0;
-  color: var(--terciary);
+  color: var(--tertiary);
   font-size: 5rem;
   max-width: 650px;
 }
@@ -11,7 +11,7 @@
 
 .paragraph {
   font-size: 2rem;
-  color: var(--terciary);
+  color: var(--tertiary);
   max-width: 650px;
 }
 
