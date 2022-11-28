@@ -1,5 +1,11 @@
 .background {
+  position: relative;
   min-height: -webkit-fill-available;
   height: 100vh;
   padding: 75px 4rem 4rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
 }

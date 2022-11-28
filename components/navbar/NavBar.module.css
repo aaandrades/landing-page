@@ -12,6 +12,8 @@
   align-items: center;
   justify-content: flex-end;
   padding: 10px 20px;
+
+  z-index: 2;
 }
 
 .container__list {

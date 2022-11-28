@@ -9,12 +9,8 @@
   color: var(--secondary);
 }
 
-.paragraph {
+.landing_paragraph {
   font-size: 2rem;
   color: var(--tertiary);
   max-width: 650px;
-}
-
-.link {
-  color: var(--secondary);
 }

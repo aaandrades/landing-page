@@ -1,0 +1,16 @@
+.container__article {
+  width: 50%;
+}
+.container__item {
+  margin-bottom: 2rem;
+}
+
+.paragraph {
+  font-size: 1rem;
+  margin: 0;
+  color: var(--tertiary);
+}
+
+.swiper {
+  width: 50vw;
+}

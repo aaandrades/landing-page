@@ -3,4 +3,12 @@
   color: var(--tertiary);
   text-align: center;
   font-weight: 100;
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.info {
+  color: var(--tertiary);
 }

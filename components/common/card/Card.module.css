@@ -1,0 +1,5 @@
+.card_container {
+  background-color: var(--tertiary);
+  color: var(--primary);
+  margin: 5px 0px;
+}

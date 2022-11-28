@@ -11,7 +11,12 @@ interface IProps {
 
 const ActiveLink = ({ onChange, active, children, id }: IProps) => (
   <li className={active === id ? styles.container__item_active : ""}>
-    <Link href={`#${id}`} scroll={false} onClick={() => onChange(id)}>
+    <Link
+      href={`#${id}`}
+      scroll={false}
+      onClick={() => onChange(id)}
+      title={id}
+    >
       {children}
     </Link>
   </li>

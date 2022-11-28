@@ -3,7 +3,7 @@ import Head from "next/head";
 const HeadComponent = () => {
   return (
     <Head>
-      <title>Andres Andrade</title>
+      <title>Andres Andrade, Fullstack Software Developer</title>
       <meta
         name="description"
         content="Andres Alexander Andrade Sanchez, Fullstack software developer based in Mississauga, Ontario - Canada"
