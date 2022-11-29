@@ -1,15 +1,9 @@
 import Link from "next/link";
 import React from "react";
 import styles from "./NavBar.module.css";
+import { ActiveElement } from "../../interfaces/interfaces";
 
-interface IProps {
-  onChange(type: string): void;
-  active: string;
-  id: string;
-  children: React.ReactNode;
-}
-
-const ActiveLink = ({ onChange, active, children, id }: IProps) => (
+const ActiveLink = ({ onChange, active, children, id }: ActiveElement) => (
   <li className={active === id ? styles.container__item_active : ""}>
     <Link
       href={`#${id}`}

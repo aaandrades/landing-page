@@ -1,3 +1,4 @@
+import { BlueBlob, YellowBlob } from "../blobs";
 import Layout from "../layout/Layout";
 import styles from "./Landing.module.css";
 
@@ -17,7 +18,12 @@ const Landing = () => {
           Visit my GitHub
         </a>
       </article>
-      <article className="article__item">SVG</article>
+      <article className="article__item">
+        <div className={styles.blob_container}>
+          <YellowBlob className={styles.blob_container__secondary} />
+          <BlueBlob className={styles.blob_container__main} />
+        </div>
+      </article>
     </Layout>
   );
 };

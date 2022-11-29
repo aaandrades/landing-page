@@ -23,8 +23,123 @@
   max-width: 600px;
   align-items: center;
   justify-content: space-between;
+  padding: 0;
+  transition: all ease-in 200ms;
 }
 
 .container__item_active {
+  font-weight: bold;
+}
+
+.show_bar,
+.hide_bar {
+  display: none;
+}
+
+.burger_btn {
+  display: none;
+}
+
+.aside {
+  width: 40%;
+  min-width: 200px;
+  transform-origin: left;
+  background-color: var(--fourth);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+}
+
+@media only screen and (max-width: 800px) {
+  .container__list {
+    width: 100%;
+    transition: all ease-in 200ms;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    padding: 0px;
+    background-color: transparent;
+    -webkit-backdrop-filter: blur(0);
+    backdrop-filter: blur(0);
+  }
+
+  .container__list {
+    display: none;
+  }
+
+  .burger_btn {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+
+    border: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(15px, 15px);
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    cursor: pointer;
+    height: 1.5rem;
+    width: 2rem;
+    z-index: 2;
+  }
+
+  .burger_btn_line {
+    width: 2rem;
+    height: 4px;
+    background-color: var(--tertiary);
+    border-radius: 20px;
+    transition: all 0.5s;
+    transform-origin: left;
+  }
+
+  .show_btn div:first-child {
+    transform: rotate(40deg);
+  }
+  .show_btn div:nth-child(2) {
+    opacity: 0;
+    transition: opacity ease-out 200ms;
+  }
+  .show_btn div:nth-child(3) {
+    transform: rotate(-40deg);
+  }
+
+  .show_bar {
+    display: block;
+    transform: scaleX(1);
+    transition: transform ease-out 200ms;
+  }
+
+  .hide_bar {
+    display: block;
+    transform: scaleX(0);
+    transition: transform ease-out 200ms;
+  }
+}
+
+.aside_content {
+  width: 100%;
+  background-color: var(--fourth);
+  display: flex;
+  flex-wrap: wrap;
+  padding: 15px 0px 20px calc(2rem + 16px);
+}
+
+.card {
+  width: 50%;
+  border-radius: 6px;
+  text-align: center;
+  padding: 0px;
+  margin-bottom: 20px;
+  min-width: 115px;
+}
+.card_active {
+  color: var(--secondary);
   font-weight: bold;
 }

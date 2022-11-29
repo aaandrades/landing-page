@@ -5,6 +5,7 @@
   --primary: #0070d9;
   --secondary: #f9c00b;
   --tertiary: white;
+  --fourth: rgba(0, 32, 62, 1);
 }
 
 html,
@@ -53,6 +54,8 @@ a {
   color: var(--secondary);
   position: relative;
   transition: color 0.3s ease-in-out;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .link::before {
@@ -82,4 +85,10 @@ a {
 
 .article__item {
   width: 50%;
+  max-width: 650px;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
