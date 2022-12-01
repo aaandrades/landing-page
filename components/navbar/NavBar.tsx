@@ -52,7 +52,7 @@ const NavBar = () => {
           <ActiveCard onChange={onChange} active={active} id="contact">
             Contact
           </ActiveCard>
-          <TalkBtn />
+          <TalkBtn onChange={(value) => setMenu(value)} />
         </div>
       </aside>
 
@@ -70,7 +70,7 @@ const NavBar = () => {
           Contact
         </ActiveLink>
         <li>
-          <TalkBtn />
+          <TalkBtn onChange={() => setMenu(false)} fullScreen />
         </li>
       </ul>
     </nav>

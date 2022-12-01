@@ -1,3 +1,24 @@
 .container {
   min-width: 115px;
+  border-radius: 6px;
+  border: none;
+  padding: 5px 10px;
+
+  background-color: var(--primary);
+  color: var(--tertiary);
+  cursor: pointer;
+  transition: transform ease-in 200ms;
+  font-size: 16px;
+}
+
+.container__fullscreen {
+  background-color: var(--secondary);
+  color: var(--primary);
+  font-weight: bold;
+  transition: transform ease-in 200ms;
+}
+
+.container:hover {
+  transform: scale3d(1.1, 1.1, 1.1);
+  transition: transform ease-in 200ms;
 }

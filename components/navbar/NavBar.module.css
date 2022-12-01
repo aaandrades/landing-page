@@ -128,7 +128,10 @@
   background-color: var(--fourth);
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   padding: 15px 0px 20px calc(2rem + 16px);
+  justify-content: center;
+  max-width: 180px;
 }
 
 .card {

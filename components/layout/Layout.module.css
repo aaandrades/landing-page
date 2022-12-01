@@ -9,3 +9,9 @@
   justify-content: center;
   flex-direction: row;
 }
+@media screen and (max-width: 600px) {
+  .background {
+    flex-direction: column-reverse;
+    padding: 1rem 10px;
+  }
+}
