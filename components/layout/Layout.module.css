@@ -9,9 +9,16 @@
   justify-content: center;
   flex-direction: row;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 650px) {
   .background {
+    flex-direction: column;
+    padding: 3rem 1rem 1rem;
+    transition: all ease-in 200ms;
+    height: auto;
+  }
+
+  .background__reverse {
     flex-direction: column-reverse;
-    padding: 1rem 10px;
+    height: 100vh;
   }
 }

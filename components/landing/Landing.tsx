@@ -5,6 +5,10 @@ import styles from "./Landing.module.css";
 import { useSpring, animated, to } from "@react-spring/web";
 import { useGesture } from "@use-gesture/react";
 import { useRouter } from "next/router";
+import Image from "next/image";
+
+import Bdb from "../../public/bancobogota.png";
+import MercadoLibre from "../../public/mercadolibre.png";
 
 const calcX = (y: number, ly: number) =>
   -(y - ly - window.innerHeight / 2) / 20;
@@ -52,8 +56,8 @@ const Landing = () => {
   );
 
   return (
-    <Layout id="home">
-      <article className="article__item">
+    <Layout id="home" reverse>
+      <article className={`article__item ${styles.landing__bottom}`}>
         <h1 className={styles.title}>
           Hi!
           <br></br>I am
@@ -66,7 +70,7 @@ const Landing = () => {
           Visit my GitHub
         </a>
       </article>
-      <article className="article__item">
+      <article className={`article__item ${styles.landing__top}`}>
         <animated.div
           ref={domTarget}
           className={styles.blob_container}
@@ -93,6 +97,10 @@ const Landing = () => {
           <div className={styles.scroll_container__mouse}></div>
         </div>
         <span className={styles.scroll_container__text}>Scroll down</span>
+      </div>
+      <div>
+        <Image src={Bdb} width={100} />
+        <Image src={MercadoLibre} width={100} />
       </div>
     </Layout>
   );
