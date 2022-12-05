@@ -9,6 +9,9 @@ import Image from "next/image";
 
 import Bdb from "../../public/bancobogota.png";
 import MercadoLibre from "../../public/mercadolibre.png";
+import Triskel from "../../public/triskel.png";
+import Lonja from "../../public/lonja.png";
+import Onfa from "../../public/onfa.png";
 
 const calcX = (y: number, ly: number) =>
   -(y - ly - window.innerHeight / 2) / 20;
@@ -38,7 +41,7 @@ const Landing = () => {
       zoom: 0,
       x: 0,
       y: 0,
-      config: { mass: 15, tension: 450, friction: 40 },
+      config: { mass: 20, tension: 400, friction: 150 },
     })
   );
 
@@ -98,9 +101,56 @@ const Landing = () => {
         </div>
         <span className={styles.scroll_container__text}>Scroll down</span>
       </div>
-      <div>
-        <Image src={Bdb} width={100} />
-        <Image src={MercadoLibre} width={100} />
+      <div className={styles.brands}>
+        <Image
+          src={MercadoLibre}
+          width="160"
+          // fill
+          alt="MercadoLibreLogo"
+          // sizes="(max-width: 550px) 100px,
+          //     (max-width: 1200px) 50vw,
+          //     33vw"
+        />
+        <Image
+          src={Bdb}
+          width="160"
+          // fill
+          height="50"
+          alt="BdbLogo"
+          // sizes="(max-width: 550px) 100px,
+          //     (max-width: 1200px) 50vw,
+          //     33vw"
+        />
+
+        <Image
+          src={Triskel}
+          width="160"
+          // fill
+          alt="TriskelLogo"
+          // sizes="(max-width: 550px) 100px,
+          //     (max-width: 1200px) 50vw,
+          //     33vw"
+        />
+
+        <Image
+          src={Lonja}
+          width="160"
+          // fill
+          alt="LonjaLogo"
+          // sizes="(max-width: 550px) 100px,
+          //     (max-width: 1200px) 50vw,
+          //     33vw"
+        />
+
+        <Image
+          src={Onfa}
+          width="110"
+          // fill
+          alt="OnfaLogo"
+          // sizes="(max-width: 550px) 100px,
+          //     (max-width: 1200px) 50vw,
+          //     33vw"
+        />
       </div>
     </Layout>
   );
