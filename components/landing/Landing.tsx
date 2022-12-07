@@ -41,7 +41,7 @@ const Landing = () => {
       zoom: 0,
       x: 0,
       y: 0,
-      config: { mass: 20, tension: 400, friction: 150 },
+      config: { mass: 20, tension: 600, friction: 150 },
     })
   );
 
@@ -91,16 +91,6 @@ const Landing = () => {
           <BlueBlob className={styles.blob_container__main} />
         </animated.div>
       </article>
-      <div
-        className={styles.scroll_container}
-        role="button"
-        onClick={() => router.push("#services", undefined, { scroll: false })}
-      >
-        <div className={styles.scroll_container__field}>
-          <div className={styles.scroll_container__mouse}></div>
-        </div>
-        <span className={styles.scroll_container__text}>Scroll down</span>
-      </div>
       <div className={styles.brands}>
         <Image
           src={MercadoLibre}
@@ -151,6 +141,16 @@ const Landing = () => {
           //     (max-width: 1200px) 50vw,
           //     33vw"
         />
+      </div>
+      <div
+        className={styles.scroll_container}
+        role="button"
+        onClick={() => router.push("#services", undefined, { scroll: false })}
+      >
+        <div className={styles.scroll_container__field}>
+          <div className={styles.scroll_container__mouse}></div>
+        </div>
+        <span className={styles.scroll_container__text}>Scroll down</span>
       </div>
     </Layout>
   );

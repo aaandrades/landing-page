@@ -8,13 +8,16 @@
   align-items: center;
   justify-content: center;
   flex-direction: row;
+
+  width: 100%;
 }
 
 .background__reverse {
   display: grid;
   grid-template-columns: 50% 50%;
-  grid-template-rows: 90% 10%;
+  grid-template-rows: 80% 20%;
   padding: 75px 4rem 0 4rem;
+  max-width: 1600px;
 }
 
 @media screen and (max-width: 650px) {
@@ -28,6 +31,6 @@
   .background__reverse {
     display: flex;
     flex-direction: column-reverse;
-    /* height: 100vh;  */
+    height: 100vh;
   }
 }

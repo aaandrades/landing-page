@@ -7,7 +7,7 @@
   background-color: var(--primary);
   color: var(--tertiary);
   cursor: pointer;
-  transition: transform ease-in 200ms;
+  transition: transform 0.15s cubic-bezier(0, 0.2, 0.5, 3) 0s;
   font-size: 16px;
 }
 
@@ -15,10 +15,10 @@
   background-color: var(--secondary);
   color: var(--primary);
   font-weight: bold;
-  transition: transform ease-in 200ms;
+  transition: transform 0.15s cubic-bezier(0, 0.2, 0.5, 3) 0s;
 }
 
 .container:hover {
-  transform: scale3d(1.1, 1.1, 1.1);
-  transition: transform ease-in 200ms;
+  transform: scale3d(1.05, 1.05, 1.05);
+  transition: transform 0.15s cubic-bezier(0, 0.2, 0.5, 3) 0s;
 }
