@@ -4,3 +4,10 @@ export interface ActiveElement {
   id: string;
   children: React.ReactNode;
 }
+
+export interface IIcons {
+  width: string;
+  href?: string;
+  onClick?(): void;
+  className?: string;
+}

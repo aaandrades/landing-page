@@ -5,9 +5,16 @@ import styles from "./TalkBtn.module.css";
 interface IProps {
   onChange(value: boolean): void;
   fullScreen?: boolean;
+  text?: string;
+  className?: string;
 }
 
-const TalkBtn = ({ onChange, fullScreen = false }: IProps) => {
+const TalkBtn = ({
+  onChange,
+  fullScreen = false,
+  text = "Let's talk",
+  className = "",
+}: IProps) => {
   return (
     <Link href="#contact" scroll={false}>
       <button
@@ -15,10 +22,10 @@ const TalkBtn = ({ onChange, fullScreen = false }: IProps) => {
         title="Send a message!"
         className={`${styles.container} ${
           fullScreen ? styles.container__fullscreen : ""
-        }`}
+        } ${className}`}
         onClick={() => onChange(false)}
       >
-        Let&apos;s talk
+        {text}
       </button>
     </Link>
   );

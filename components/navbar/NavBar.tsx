@@ -19,6 +19,7 @@ const NavBar = () => {
 
   const onChange = (value: string) => {
     setActive(value);
+    setMenu(false);
   };
 
   return (

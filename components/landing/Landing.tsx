@@ -12,6 +12,7 @@ import MercadoLibre from "../../public/mercadolibre.png";
 import Triskel from "../../public/triskel.png";
 import Lonja from "../../public/lonja.png";
 import Onfa from "../../public/onfa.png";
+import MainActions from "../main-actions/MainActions";
 
 const calcX = (y: number, ly: number) =>
   -(y - ly - window.innerHeight / 2) / 20;
@@ -69,9 +70,7 @@ const Landing = () => {
         <p className={styles.landing_paragraph}>
           A Fullstack Software Developer based in Mississauga, Ontario - Canada
         </p>
-        <a href="https://github.com/aaandrades" className="link">
-          Visit my GitHub
-        </a>
+        <MainActions />
       </article>
       <article className={`article__item ${styles.landing__top}`}>
         <animated.div
@@ -92,55 +91,11 @@ const Landing = () => {
         </animated.div>
       </article>
       <div className={styles.brands}>
-        <Image
-          src={MercadoLibre}
-          width="160"
-          // fill
-          alt="MercadoLibreLogo"
-          // sizes="(max-width: 550px) 100px,
-          //     (max-width: 1200px) 50vw,
-          //     33vw"
-        />
-        <Image
-          src={Bdb}
-          width="160"
-          // fill
-          height="50"
-          alt="BdbLogo"
-          // sizes="(max-width: 550px) 100px,
-          //     (max-width: 1200px) 50vw,
-          //     33vw"
-        />
-
-        <Image
-          src={Triskel}
-          width="160"
-          // fill
-          alt="TriskelLogo"
-          // sizes="(max-width: 550px) 100px,
-          //     (max-width: 1200px) 50vw,
-          //     33vw"
-        />
-
-        <Image
-          src={Lonja}
-          width="160"
-          // fill
-          alt="LonjaLogo"
-          // sizes="(max-width: 550px) 100px,
-          //     (max-width: 1200px) 50vw,
-          //     33vw"
-        />
-
-        <Image
-          src={Onfa}
-          width="110"
-          // fill
-          alt="OnfaLogo"
-          // sizes="(max-width: 550px) 100px,
-          //     (max-width: 1200px) 50vw,
-          //     33vw"
-        />
+        <Image src={MercadoLibre} width="160" alt="MercadoLibreLogo" />
+        <Image src={Bdb} width="160" height="50" alt="BdbLogo" />
+        <Image src={Triskel} width="160" alt="TriskelLogo" />
+        <Image src={Lonja} width="160" alt="LonjaLogo" />
+        <Image src={Onfa} width="110" alt="OnfaLogo" />
       </div>
       <div
         className={styles.scroll_container}
