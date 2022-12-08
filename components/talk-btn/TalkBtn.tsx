@@ -3,14 +3,14 @@ import React from "react";
 import styles from "./TalkBtn.module.css";
 
 interface IProps {
-  onChange(value: boolean): void;
+  onChange?(value: boolean): void;
   fullScreen?: boolean;
   text?: string;
   className?: string;
 }
 
 const TalkBtn = ({
-  onChange,
+  onChange = () => undefined,
   fullScreen = false,
   text = "Let's talk",
   className = "",

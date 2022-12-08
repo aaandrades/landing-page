@@ -1,18 +1,19 @@
+import Image from "next/image";
 import { useRef, useEffect } from "react";
-import { BlueBlob, YellowBlob } from "../blobs";
-import Layout from "../layout/Layout";
-import styles from "./Landing.module.css";
+import { useRouter } from "next/router";
 import { useSpring, animated, to } from "@react-spring/web";
 import { useGesture } from "@use-gesture/react";
-import { useRouter } from "next/router";
-import Image from "next/image";
+import Layout from "../layout/Layout";
+import styles from "./Landing.module.css";
+import { BlueBlob, YellowBlob } from "../blobs";
+import MainActions from "../main-actions/MainActions";
 
 import Bdb from "../../public/bancobogota.png";
 import MercadoLibre from "../../public/mercadolibre.png";
 import Triskel from "../../public/triskel.png";
 import Lonja from "../../public/lonja.png";
 import Onfa from "../../public/onfa.png";
-import MainActions from "../main-actions/MainActions";
+import ProfilePhoto from "../../public/profile.png";
 
 const calcX = (y: number, ly: number) =>
   -(y - ly - window.innerHeight / 2) / 20;
@@ -86,6 +87,12 @@ const Landing = () => {
             rotateZ,
           }}
         >
+          <Image
+            src={ProfilePhoto}
+            className={styles.blob_container__profile}
+            width="200"
+            alt="Profile"
+          />
           <YellowBlob className={styles.blob_container__secondary} />
           <BlueBlob className={styles.blob_container__main} />
         </animated.div>
