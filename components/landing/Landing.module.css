@@ -161,7 +161,7 @@
   .brands {
     position: absolute;
     bottom: 0;
-    transform: translate(0, -100%);
+    transform: translate(0, -50%);
     right: 0;
     left: 0;
     width: 100%;

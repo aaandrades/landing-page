@@ -1,24 +1,17 @@
 import styles from "./NavBar.module.css";
 import TalkBtn from "../talk-btn/TalkBtn";
 import { useRouter } from "next/router";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import ActiveLink from "./ActiveLink";
 import ActiveCard from "./ActiveCard";
 
 type THash = "home" | "services" | "about" | "contact";
 
 const NavBar = () => {
-  const { asPath } = useRouter();
   const [active, setActive] = useState("home");
   const [menu, setMenu] = useState(false);
 
-  useEffect(() => {
-    const hash: THash = asPath.split("#")[1] as THash;
-    setActive(hash);
-  }, [asPath]);
-
   const onChange = (value: string) => {
-    setActive(value);
     setMenu(false);
   };
 
@@ -41,16 +34,16 @@ const NavBar = () => {
         }`}
       >
         <div className={styles.aside_content}>
-          <ActiveCard onChange={onChange} active={active} id="home">
+          <ActiveCard onChange={onChange} id="home">
             Home
           </ActiveCard>
-          <ActiveCard onChange={onChange} active={active} id="services">
+          <ActiveCard onChange={onChange} id="services">
             Services
           </ActiveCard>
-          <ActiveCard onChange={onChange} active={active} id="about">
+          <ActiveCard onChange={onChange} id="about">
             About
           </ActiveCard>
-          <ActiveCard onChange={onChange} active={active} id="contact">
+          <ActiveCard onChange={onChange} id="contact">
             Contact
           </ActiveCard>
           <TalkBtn onChange={(value) => setMenu(value)} />
@@ -58,16 +51,16 @@ const NavBar = () => {
       </aside>
 
       <ul className={styles.container__list}>
-        <ActiveLink onChange={onChange} active={active} id="home">
+        <ActiveLink onChange={onChange} id="home">
           Home
         </ActiveLink>
-        <ActiveLink onChange={onChange} active={active} id="services">
+        <ActiveLink onChange={onChange} id="services">
           Services
         </ActiveLink>
-        <ActiveLink onChange={onChange} active={active} id="about">
+        <ActiveLink onChange={onChange} id="about">
           About
         </ActiveLink>
-        <ActiveLink onChange={onChange} active={active} id="contact">
+        <ActiveLink onChange={onChange} id="contact">
           Contact
         </ActiveLink>
         <li>

@@ -1,18 +1,19 @@
 import React from "react";
 import { ActiveElement } from "../../interfaces/interfaces";
-import Link from "next/link";
+import { Link } from "react-scroll";
 import styles from "./NavBar.module.css";
 
-const ActiveCard = ({ onChange, active, children, id }: ActiveElement) => {
+const ActiveCard = ({ onChange, children, id }: ActiveElement) => {
   return (
-    <div
-      className={`${styles.card} ${active === id ? styles.card_active : ""}`}
-    >
+    <div className={styles.card}>
       <Link
-        href={`#${id}`}
-        scroll={false}
-        onClick={() => onChange(id)}
-        title={id}
+        activeClass={styles.card_active}
+        smooth
+        spy
+        to={id}
+        hashSpy
+        duration={300}
+        onClick={() => (onChange ? onChange(id) : null)}
       >
         {children}
       </Link>

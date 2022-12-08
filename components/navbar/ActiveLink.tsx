@@ -1,18 +1,21 @@
-import Link from "next/link";
+import { Link as ScrollLink } from "react-scroll";
 import React from "react";
 import styles from "./NavBar.module.css";
 import { ActiveElement } from "../../interfaces/interfaces";
 
-const ActiveLink = ({ onChange, active, children, id }: ActiveElement) => (
-  <li className={active === id ? styles.container__item_active : ""}>
-    <Link
+const ActiveLink = ({ children, id }: ActiveElement) => (
+  <li>
+    <ScrollLink
       href={`#${id}`}
-      scroll={false}
-      onClick={() => onChange(id)}
-      title={id}
+      activeClass={styles.card_active}
+      smooth
+      spy
+      to={id}
+      duration={300}
+      hashSpy
     >
       {children}
-    </Link>
+    </ScrollLink>
   </li>
 );
 

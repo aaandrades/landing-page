@@ -7,6 +7,7 @@ import Layout from "../layout/Layout";
 import styles from "./Landing.module.css";
 import { BlueBlob, YellowBlob } from "../blobs";
 import MainActions from "../main-actions/MainActions";
+import { Link } from "react-scroll";
 
 import Bdb from "../../public/bancobogota.png";
 import MercadoLibre from "../../public/mercadolibre.png";
@@ -104,16 +105,14 @@ const Landing = () => {
         <Image src={Lonja} width="160" alt="LonjaLogo" />
         <Image src={Onfa} width="110" alt="OnfaLogo" />
       </div>
-      <div
-        className={styles.scroll_container}
-        role="button"
-        onClick={() => router.push("#services", undefined, { scroll: false })}
-      >
-        <div className={styles.scroll_container__field}>
-          <div className={styles.scroll_container__mouse}></div>
+      <Link smooth to="services" duration={300}>
+        <div className={styles.scroll_container}>
+          <div className={styles.scroll_container__field}>
+            <div className={styles.scroll_container__mouse}></div>
+          </div>
+          <span className={styles.scroll_container__text}>Scroll down</span>
         </div>
-        <span className={styles.scroll_container__text}>Scroll down</span>
-      </div>
+      </Link>
     </Layout>
   );
 };
