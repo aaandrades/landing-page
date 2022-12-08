@@ -25,7 +25,7 @@ const Services = () => {
           <span className={styles.title__secondary}> in mind</span>?
         </h2>
         <p className={styles.paragraph__secondary}>I can help you</p>
-        <div>
+        <div className={styles.cards}>
           <Card>Mobile Design & Development</Card>
           <Card>Web Design & Development</Card>
           <Card>Customized services</Card>

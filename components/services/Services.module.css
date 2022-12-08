@@ -1,5 +1,6 @@
 .container__item {
   margin-bottom: 2rem;
+  /* line-height: 1; */
 }
 
 .title__secondary {
@@ -13,6 +14,14 @@
 }
 
 .paragraph__secondary {
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: var(--tertiary);
+  margin: 10px 0 2rem 0;
+}
+
+.cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
