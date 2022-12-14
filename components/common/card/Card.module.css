@@ -17,7 +17,6 @@
   justify-content: center;
   flex-direction: column;
   text-align: center;
-  width: -webkit-fill-available;
   height: 100%;
 }
 
@@ -46,4 +45,26 @@
   display: block;
   transform: translateZ(-1px) rotate(-5deg) scale(1.05);
   transition: transform ease-in 100ms;
+}
+
+@media screen and (max-width: 850px) {
+  .card_container > span {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .card_container {
+    width: 100%;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  .card_container > span {
+    margin-left: 10px;
+    font-size: 1rem;
+  }
+  .card_container:hover::before {
+    transform: translateZ(-1px) rotate(-2deg) scale(1.03);
+  }
 }

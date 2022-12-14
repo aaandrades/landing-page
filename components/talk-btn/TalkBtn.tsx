@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "react-scroll";
 import React from "react";
 import styles from "./TalkBtn.module.css";
 
@@ -16,7 +16,7 @@ const TalkBtn = ({
   className = "",
 }: IProps) => {
   return (
-    <Link href="#contact" scroll={false}>
+    <Link smooth to="contact" hashSpy duration={300}>
       <button
         type="button"
         title="Send a message!"

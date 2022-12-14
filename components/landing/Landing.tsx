@@ -105,7 +105,7 @@ const Landing = () => {
         <Image src={Lonja} width="160" alt="LonjaLogo" />
         <Image src={Onfa} width="110" alt="OnfaLogo" />
       </div>
-      <Link smooth to="services" duration={300}>
+      <Link smooth href="#services" to="services" duration={300} hashSpy>
         <div className={styles.scroll_container}>
           <div className={styles.scroll_container__field}>
             <div className={styles.scroll_container__mouse}></div>

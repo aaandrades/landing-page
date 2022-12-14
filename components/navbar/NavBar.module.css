@@ -144,7 +144,9 @@
   padding: 0px;
   margin-bottom: 20px;
   min-width: 115px;
+  cursor: pointer;
 }
+
 .card_active {
   color: var(--secondary);
   font-weight: bold;

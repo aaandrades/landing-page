@@ -33,4 +33,8 @@
     flex-direction: column-reverse;
     height: 100vh;
   }
+
+  .background__invert {
+    flex-direction: column-reverse;
+  }
 }
