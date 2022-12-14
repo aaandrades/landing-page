@@ -64,17 +64,21 @@
   .skills {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     flex-direction: row;
-    text-align: center;
     flex-wrap: wrap;
     gap: 10px;
   }
 
   .skills > .container__item {
-    width: 1fr;
+    width: 30%;
     min-width: 110px;
     border-radius: 6px;
-    border: 1px solid var(--tertiary);
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .skills {
+    text-align: center;
   }
 }
