@@ -9,6 +9,8 @@ interface IProps {
   onChange(value: any): void;
   name: string;
   className?: string;
+  type: string;
+  required: boolean;
 }
 
 const Input = ({
@@ -18,6 +20,8 @@ const Input = ({
   value,
   onChange,
   name,
+  type,
+  required,
   className = "",
 }: IProps) => {
   return (
@@ -26,6 +30,8 @@ const Input = ({
         {label}
       </label>
       <input
+        required={required}
+        type={type}
         className={styles.input}
         id={name}
         name={name}

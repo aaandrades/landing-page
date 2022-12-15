@@ -93,6 +93,7 @@ const Landing = () => {
             className={styles.blob_container__profile}
             width="200"
             alt="Profile"
+            priority
           />
           <YellowBlob className={styles.blob_container__secondary} />
           <BlueBlob className={styles.blob_container__main} />

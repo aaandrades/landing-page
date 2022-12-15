@@ -3,6 +3,8 @@ import Layout from "../layout/Layout";
 import styles from "./Contact.module.css";
 import Input from "../common/input/Input";
 import ReactCanvasConfetti from "react-canvas-confetti";
+import Loader from "../common/loader/Loader";
+import { Player, Controls } from "@lottiefiles/react-lottie-player";
 
 const canvasStyles = {
   position: "fixed",
@@ -57,6 +59,9 @@ const Contact = () => {
       startVelocity: 45,
     });
   }, [makeShot]);
+
+  const [loading, setLoading] = useState(false);
+  const [sent, setSent] = useState(false);
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -70,6 +75,31 @@ const Contact = () => {
     }));
   };
 
+  const handleEmail = async () => {
+    try {
+      const promise = new Promise((resolve) =>
+        setTimeout(() => {
+          resolve(true);
+        }, 2000)
+      );
+      console.log("before");
+      setLoading(true);
+      await promise;
+      console.log("after");
+      setSent(true);
+      fire();
+    } catch (error) {
+      console.error();
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const onSubmit = (e: any) => {
+    e.preventDefault();
+    handleEmail();
+  };
+
   return (
     <Layout id="contact">
       <article className={`article__item ${styles.height}`}>
@@ -78,49 +108,72 @@ const Contact = () => {
         <p className={styles.info}>Phone: +1 905-783-5816</p>
         <p className={styles.info}>Mississauga, Ontario, Canada</p>
       </article>
-      <article className={`article__item ${styles.form} ${styles.height}`}>
-        <Input
-          className={styles.form__input}
-          label="Your name"
-          value={form.name}
-          name="name"
-          onChange={(target) => handleChange(target)}
-          placeholder="Ej: John Doe"
-          title="Your name"
-        />
-        <Input
-          className={styles.form__input}
-          label="Your email"
-          value={form.email}
-          name="email"
-          onChange={(target) => handleChange(target)}
-          placeholder="Ej: John@doe.com"
-          title="Your email"
-        />
-        <Input
-          className={styles.form__input}
-          label="Your message"
-          value={form.message}
-          name="message"
-          onChange={(target) => handleChange(target)}
-          placeholder="Ej: Hello! I want to hire you"
-          title="Your message"
-        />
-        <button
-          type="submit"
-          className={styles.submit_button}
-          onClick={(e) => {
-            e.preventDefault();
-            fire();
-          }}
+      {sent ? (
+        <article className={`article__item ${styles.form} ${styles.height}`}>
+          <Player
+            autoplay
+            loop
+            src="https://assets5.lottiefiles.com/packages/lf20_s2lryxtd.json"
+            style={{ height: "300px", width: "300px" }}
+          >
+            {/* <Controls
+              visible={true}
+              buttons={["play", "repeat", "frame", "debug"]}
+            /> */}
+          </Player>
+        </article>
+      ) : (
+        <form
+          className={`article__item ${styles.form} ${styles.height}`}
+          onSubmit={onSubmit}
         >
-          Send!
-          <ReactCanvasConfetti
-            refConfetti={getInstance}
-            style={canvasStyles as any}
+          <Input
+            className={styles.form__input}
+            label="Your name *"
+            value={form.name}
+            name="name"
+            type="text"
+            onChange={(target) => handleChange(target)}
+            placeholder="Ej: John Doe"
+            title="Your name"
+            required
           />
-        </button>
-      </article>
+          <Input
+            className={styles.form__input}
+            label="Your email *"
+            value={form.email}
+            name="email"
+            onChange={(target) => handleChange(target)}
+            placeholder="Ej: John@doe.com"
+            title="Your email"
+            type="email"
+            required
+          />
+          <Input
+            className={styles.form__input}
+            label="Your message *"
+            value={form.message}
+            name="message"
+            type="text"
+            onChange={(target) => handleChange(target)}
+            placeholder="Ej: Hello! I want to hire you"
+            title="Your message"
+            required
+          />
+          <button
+            type="submit"
+            disabled={!form.email || !form.message || !form.name}
+            className={styles.submit_button}
+          >
+            Send!
+            <ReactCanvasConfetti
+              refConfetti={getInstance}
+              style={canvasStyles as any}
+            />
+          </button>
+        </form>
+      )}
+      <Loader show={loading} />
       <footer className={styles.footer__container}>
         Made with ❤️ by Andres Andrade ©
       </footer>

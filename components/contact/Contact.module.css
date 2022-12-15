@@ -53,6 +53,11 @@
   transition: all cubic-bezier(0.17, 0.67, 0.83, 0.67) 200ms;
 }
 
+.submit_button:disabled {
+  background-color: gray;
+  cursor: not-allowed;
+}
+
 @media screen and (max-width: 850px) {
   .heading {
     font-size: 3rem;
