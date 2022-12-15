@@ -4,7 +4,8 @@ import styles from "./Contact.module.css";
 import Input from "../common/input/Input";
 import ReactCanvasConfetti from "react-canvas-confetti";
 import Loader from "../common/loader/Loader";
-import { Player, Controls } from "@lottiefiles/react-lottie-player";
+import { Player } from "@lottiefiles/react-lottie-player";
+import "animate.css";
 
 const canvasStyles = {
   position: "fixed",
@@ -82,14 +83,14 @@ const Contact = () => {
           resolve(true);
         }, 2000)
       );
-      console.log("before");
       setLoading(true);
       await promise;
-      console.log("after");
       setSent(true);
       fire();
     } catch (error) {
-      console.error();
+      console.error("Error sending messaje");
+      console.error(error);
+      setSent(false);
     } finally {
       setLoading(false);
     }
@@ -109,18 +110,18 @@ const Contact = () => {
         <p className={styles.info}>Mississauga, Ontario, Canada</p>
       </article>
       {sent ? (
-        <article className={`article__item ${styles.form} ${styles.height}`}>
+        <article
+          className={`article__item ${styles.form} ${styles.height} animate__animated animate__fadeIn`}
+        >
+          <span className={styles.response_header}>
+            Thanks for submit your information, we will be in touch soon!
+          </span>
           <Player
             autoplay
             loop
             src="https://assets5.lottiefiles.com/packages/lf20_s2lryxtd.json"
-            style={{ height: "300px", width: "300px" }}
-          >
-            {/* <Controls
-              visible={true}
-              buttons={["play", "repeat", "frame", "debug"]}
-            /> */}
-          </Player>
+            className={styles.lottie_success}
+          />
         </article>
       ) : (
         <form
@@ -166,14 +167,14 @@ const Contact = () => {
             className={styles.submit_button}
           >
             Send!
-            <ReactCanvasConfetti
-              refConfetti={getInstance}
-              style={canvasStyles as any}
-            />
           </button>
         </form>
       )}
       <Loader show={loading} />
+      <ReactCanvasConfetti
+        refConfetti={getInstance}
+        style={canvasStyles as any}
+      />
       <footer className={styles.footer__container}>
         Made with ❤️ by Andres Andrade ©
       </footer>

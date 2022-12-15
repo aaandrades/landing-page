@@ -58,6 +58,17 @@
   cursor: not-allowed;
 }
 
+.response_header {
+  color: var(--primary);
+  text-align: center;
+  font-weight: bold;
+}
+
+.lottie_success {
+  height: 80%;
+  width: 80%;
+}
+
 @media screen and (max-width: 850px) {
   .heading {
     font-size: 3rem;
@@ -72,6 +83,10 @@
 @media screen and (max-width: 650px) {
   .heading {
     margin-top: 3rem;
+  }
+
+  .response_header {
+    margin-top: 2rem;
   }
 
   .form {

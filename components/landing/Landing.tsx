@@ -1,6 +1,5 @@
 import Image from "next/image";
-import { useRef, useEffect } from "react";
-import { useRouter } from "next/router";
+import { useRef } from "react";
 import { useSpring, animated, to } from "@react-spring/web";
 import { useGesture } from "@use-gesture/react";
 import Layout from "../layout/Layout";
@@ -21,19 +20,7 @@ const calcX = (y: number, ly: number) =>
 const calcY = (x: number, lx: number) => (x - lx - window.innerWidth / 2) / 20;
 
 const Landing = () => {
-  useEffect(() => {
-    const preventDefault = (e: Event) => e.preventDefault();
-    document.addEventListener("gesturestart", preventDefault);
-    document.addEventListener("gesturechange", preventDefault);
-
-    return () => {
-      document.removeEventListener("gesturestart", preventDefault);
-      document.removeEventListener("gesturechange", preventDefault);
-    };
-  }, []);
-
   const domTarget = useRef(null);
-  const router = useRouter();
 
   const [{ x, y, rotateX, rotateY, rotateZ, zoom, scale }, api] = useSpring(
     () => ({
