@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./Input.module.css";
 
 interface IProps {
   label: string;
@@ -7,6 +8,7 @@ interface IProps {
   value: string | number;
   onChange(value: any): void;
   name: string;
+  className?: string;
 }
 
 const Input = ({
@@ -16,11 +18,15 @@ const Input = ({
   value,
   onChange,
   name,
+  className = "",
 }: IProps) => {
   return (
-    <div>
-      <label htmlFor={name}>{label}</label>
+    <div className={`${styles.input_container} ${className}`}>
+      <label className={styles.label} htmlFor={name}>
+        {label}
+      </label>
       <input
+        className={styles.input}
         id={name}
         name={name}
         value={value}
