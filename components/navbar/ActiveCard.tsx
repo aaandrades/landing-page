@@ -7,6 +7,7 @@ const ActiveCard = ({ onChange, children, id }: ActiveElement) => {
   return (
     <div className={styles.card}>
       <Link
+        href={`#${id}`}
         activeClass={styles.card_active}
         smooth
         spy

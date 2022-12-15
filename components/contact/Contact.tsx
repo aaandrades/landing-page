@@ -17,6 +17,14 @@ const canvasStyles = {
 };
 
 const Contact = () => {
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
+  const [sent, setSent] = useState(false);
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
   const refAnimationInstance = useRef<any>(null);
 
   const getInstance = useCallback((instance: any) => {
@@ -61,14 +69,6 @@ const Contact = () => {
     });
   }, [makeShot]);
 
-  const [loading, setLoading] = useState(false);
-  const [sent, setSent] = useState(false);
-  const [form, setForm] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-
   const handleChange = (target: any) => {
     setForm((prevForm) => ({
       ...prevForm,
@@ -88,9 +88,10 @@ const Contact = () => {
       setSent(true);
       fire();
     } catch (error) {
-      console.error("Error sending messaje");
+      console.error("Error sending message");
       console.error(error);
-      setSent(false);
+      setSent(true);
+      setError(true);
     } finally {
       setLoading(false);
     }
@@ -99,6 +100,16 @@ const Contact = () => {
   const onSubmit = (e: any) => {
     e.preventDefault();
     handleEmail();
+  };
+
+  const resetForm = () => {
+    setSent(false);
+    setError(false);
+    setForm({
+      name: "",
+      email: "",
+      message: "",
+    });
   };
 
   return (
@@ -113,15 +124,38 @@ const Contact = () => {
         <article
           className={`article__item ${styles.form} ${styles.height} animate__animated animate__fadeIn`}
         >
-          <span className={styles.response_header}>
-            Thanks for submit your information, we will be in touch soon!
-          </span>
-          <Player
-            autoplay
-            loop
-            src="https://assets5.lottiefiles.com/packages/lf20_s2lryxtd.json"
-            className={styles.lottie_success}
-          />
+          {error ? (
+            <>
+              <span className={styles.response_header}>
+                There was an error sending the information, please try again :(
+              </span>
+              <Player
+                autoplay
+                loop
+                src="https://assets1.lottiefiles.com/packages/lf20_bdnjxekx.json"
+                className={styles.lottie_success}
+              />
+              <button
+                type="button"
+                className={styles.submit_button}
+                onClick={() => resetForm()}
+              >
+                Try again
+              </button>
+            </>
+          ) : (
+            <>
+              <span className={styles.response_header}>
+                Thanks for submit your information, we will be in touch soon!
+              </span>
+              <Player
+                autoplay
+                loop
+                src="https://assets5.lottiefiles.com/packages/lf20_s2lryxtd.json"
+                className={styles.lottie_success}
+              />
+            </>
+          )}
         </article>
       ) : (
         <form
