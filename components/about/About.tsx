@@ -11,6 +11,7 @@ import Link from "next/link";
 import DownloadBtn from "../common/download-btn/DownloadBtn";
 import Image from "next/image";
 
+import Profile from "../../public/profile.png";
 import ReactImg from "../../public/react.png";
 import AngularImg from "../../public/angular.png";
 import NestJsImg from "../../public/nest.png";
@@ -94,8 +95,8 @@ const About = () => {
           </SwiperSlide>
         </Swiper>
       </article>
-      <article className="article__item">
-        SVG
+      <article className={`article__item ${styles.profile}`}>
+        <Image src={Profile} width="400" alt="MercadoLibreLogo" />
         <DownloadBtn />
       </article>
     </Layout>

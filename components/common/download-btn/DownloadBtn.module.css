@@ -1,0 +1,14 @@
+.download {
+  background-color: var(--secondary);
+  color: var(--primary);
+  border-radius: 6px;
+  padding: 5px 10px;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.download:hover {
+  transform: scale3d(1.05, 1.05, 1.05);
+  transition: transform 0.15s cubic-bezier(0, 0.2, 0.5, 3) 0s;
+}

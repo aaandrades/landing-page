@@ -30,16 +30,29 @@
   margin-bottom: 1rem;
 }
 
+.profile {
+  display: flex;
+  align-items: center;
+}
+
+.profile > img {
+  width: 45%;
+  height: auto;
+  border-radius: 100%;
+  margin-bottom: 20px;
+  filter: drop-shadow(6px 1px 4px black);
+}
+
 @media screen and (max-width: 850px) {
   .heading {
     font-size: 3rem;
     transition: all cubic-bezier(0.17, 0.67, 0.83, 0.67) 200ms;
   }
-}
-
-@media screen and (max-width: 850px) {
   .paragraph {
     margin-bottom: 2rem;
+  }
+  .profile > img {
+    width: 65%;
   }
 }
 
@@ -47,6 +60,10 @@
   .heading {
     margin-top: 3rem;
     font-size: 2rem;
+  }
+  .profile > img {
+    margin-top: 20px;
+    width: 40%;
   }
 }
 
