@@ -1,12 +1,14 @@
 import Layout from "../layout/Layout";
 import styles from "./Services.module.css";
 import Card from "../common/card/Card";
+import { Player } from "@lottiefiles/react-lottie-player";
 
 import {
   MobileDevelopmentIcon,
   WebDevelopmentIcon,
   DefaultServicesIcon,
 } from "../icons";
+import Image from "next/image";
 
 const Services = () => {
   return (
@@ -45,15 +47,34 @@ const Services = () => {
         <p className={styles.paragraph__secondary}>I can help you</p>
         <div className={styles.cards}>
           <Card>
-            <WebDevelopmentIcon />
+            <Player
+              autoplay
+              loop
+              src="https://assets1.lottiefiles.com/packages/lf20_8dbkv90i.json"
+              className={styles.lottie_success}
+            />
+            {/* <WebDevelopmentIcon /> */}
+            {/* <Image src={Custom} width="90" height="90" alt="Custom" /> */}
             <span>Mobile Design & Development</span>
           </Card>
           <Card>
-            <MobileDevelopmentIcon />
+            {/* <MobileDevelopmentIcon /> */}
+            <Player
+              autoplay
+              loop
+              src="https://assets7.lottiefiles.com/packages/lf20_rvkzuvrm.json"
+              className={styles.lottie_success}
+            />
             <span>Web Design & Development</span>
           </Card>
           <Card>
-            <DefaultServicesIcon />
+            {/* <DefaultServicesIcon /> */}
+            <Player
+              autoplay
+              loop
+              src="https://assets2.lottiefiles.com/packages/lf20_efoipkq9.json"
+              className={styles.lottie_success}
+            />
             <span>Customized services</span>
           </Card>
         </div>
