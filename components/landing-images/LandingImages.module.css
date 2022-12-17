@@ -1,0 +1,169 @@
+.blob_container__profile {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  filter: drop-shadow(2px 4px 2px black);
+}
+
+.blob_container__text {
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translate(0%, -50%);
+  z-index: 2;
+  background-color: var(--fourth);
+  border-radius: 6px;
+  color: var(--secondary);
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  width: 100px;
+  font-size: 1rem;
+  font-size: 12px;
+  padding: 5px 10px;
+}
+
+.tooltip {
+  display: none;
+}
+
+.tooltip_link {
+  color: var(--primary);
+}
+
+.blob_container__text:hover + .tooltip,
+.tooltip:hover {
+  cursor: default;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 100px;
+  z-index: 3;
+  transform: translate(0%, -50%);
+  border-radius: 6px;
+  background-color: white;
+  font-weight: 500;
+  padding: 10px 15px;
+  max-width: 300px;
+}
+
+.ia {
+  width: 60%;
+  height: auto;
+  border-radius: 40%;
+}
+
+.funko {
+  animation: funko 16s infinite;
+}
+
+.ironman {
+  border-radius: 20%;
+  animation: ironman 16s infinite;
+}
+
+.suit {
+  border-radius: 100%;
+  animation: suit 16s infinite;
+}
+
+.pixar {
+  width: 35%;
+  height: auto;
+  animation: pixar 16s infinite;
+}
+
+@keyframes funko {
+  0% {
+    opacity: 0;
+  }
+
+  5%,
+  30% {
+    opacity: 1;
+  }
+
+  35%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes ironman {
+  0%,
+  30% {
+    opacity: 0;
+  }
+
+  40%,
+  60% {
+    opacity: 1;
+  }
+
+  70%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes suit {
+  0%,
+  60% {
+    opacity: 0;
+  }
+
+  78%,
+  80% {
+    opacity: 1;
+  }
+
+  85%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes pixar {
+  0%,
+  80% {
+    opacity: 0;
+  }
+
+  85%,
+  98% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .blob_container__text:hover + .tooltip,
+  .tooltip:hover {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .ia {
+    width: 50%;
+  }
+
+  .pixar {
+    width: 25%;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .ia {
+    width: 70%;
+  }
+
+  .pixar {
+    width: 40%;
+  }
+}

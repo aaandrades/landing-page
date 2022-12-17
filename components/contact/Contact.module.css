@@ -83,6 +83,7 @@
 @media screen and (max-width: 650px) {
   .heading {
     margin-top: 3rem;
+    font-size: 2rem;
   }
 
   .response_header {

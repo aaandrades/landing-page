@@ -8,12 +8,13 @@ import { BlueBlob, YellowBlob } from "../blobs";
 import MainActions from "../main-actions/MainActions";
 import { Link } from "react-scroll";
 
+// Images
 import Bdb from "../../public/bancobogota.png";
 import MercadoLibre from "../../public/mercadolibre.png";
 import Triskel from "../../public/triskel.png";
 import Lonja from "../../public/lonja.png";
 import Onfa from "../../public/onfa.png";
-import ProfilePhoto from "../../public/profile.png";
+import LandingImages from "../landing-images/LandingImages";
 
 const calcX = (y: number, ly: number) =>
   -(y - ly - window.innerHeight / 2) / 20;
@@ -31,7 +32,7 @@ const Landing = () => {
       zoom: 0,
       x: 0,
       y: 0,
-      config: { mass: 20, tension: 600, friction: 150 },
+      config: { mass: 40, tension: 400, friction: 250 },
     })
   );
 
@@ -66,7 +67,7 @@ const Landing = () => {
           ref={domTarget}
           className={styles.blob_container}
           style={{
-            transform: "perspective(600px)",
+            transform: "perspective(500px)",
             x,
             y,
             scale: to([scale, zoom], (s, z) => s + z),
@@ -75,13 +76,7 @@ const Landing = () => {
             rotateZ,
           }}
         >
-          <Image
-            src={ProfilePhoto}
-            className={styles.blob_container__profile}
-            width="200"
-            alt="Profile"
-            priority
-          />
+          <LandingImages />
           <YellowBlob className={styles.blob_container__secondary} />
           <BlueBlob className={styles.blob_container__main} />
         </animated.div>

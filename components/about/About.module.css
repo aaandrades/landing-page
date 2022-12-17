@@ -7,10 +7,52 @@
 
 .paragraph {
   font-size: 1rem;
-  margin: 0;
+  padding-right: 10px;
+  margin: 0 0 5rem 0;
   color: var(--tertiary);
 }
 
 .swiper {
-  width: 50vw;
+  width: 100%;
+  max-width: 500px;
+  padding-bottom: 10px;
+  height: 140px;
+}
+
+.swiper_slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70% !important;
+}
+
+.heading {
+  margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 850px) {
+  .heading {
+    font-size: 3rem;
+    transition: all cubic-bezier(0.17, 0.67, 0.83, 0.67) 200ms;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .paragraph {
+    margin-bottom: 2rem;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .heading {
+    margin-top: 3rem;
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .swiper img {
+    width: 60%;
+    height: 60%;
+  }
 }
