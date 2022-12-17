@@ -17,7 +17,7 @@ const LandingImages = () => {
         alt="Profile"
         priority
       />
-      <Image
+      {/* <Image
         src={IronManPhoto}
         className={`${styles.blob_container__profile} ${styles.ia} ${styles.ironman}`}
         width="500"
@@ -37,7 +37,7 @@ const LandingImages = () => {
         width="500"
         alt="Profile AI"
         priority
-      />
+      /> */}
       <span
         id="images-ia"
         className={styles.blob_container__text}
@@ -46,7 +46,7 @@ const LandingImages = () => {
         What is this?
       </span>
       <span className={styles.tooltip}>
-        These images are created using Artificial Intelligence with Stable
+        This image was created using Artificial Intelligence with Stable
         Diffusion and trained with my face. More info
         <a
           className={styles.tooltip_link}

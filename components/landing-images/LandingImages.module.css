@@ -56,10 +56,10 @@
 }
 
 .funko {
-  animation: funko 16s infinite;
+  animation: funko 16s;
 }
 
-.ironman {
+/* .ironman {
   border-radius: 40%;
   animation: ironman 16s infinite;
 }
@@ -73,7 +73,7 @@
   width: 35%;
   height: auto;
   animation: pixar 16s infinite;
-}
+} */
 
 @keyframes funko {
   0% {
@@ -81,17 +81,12 @@
   }
 
   5%,
-  30% {
-    opacity: 1;
-  }
-
-  35%,
   100% {
-    opacity: 0;
+    opacity: 1;
   }
 }
 
-@keyframes ironman {
+/* @keyframes ironman {
   0%,
   30% {
     opacity: 0;
@@ -139,7 +134,7 @@
   100% {
     opacity: 0;
   }
-}
+} */
 
 @media only screen and (max-width: 850px) {
   .blob_container__text:hover + .tooltip,
