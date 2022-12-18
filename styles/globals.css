@@ -85,12 +85,6 @@ a {
   margin: 0;
 }
 
-@media screen and (max-width: 650px) {
-  .subheading {
-    font-size: 2rem;
-  }
-}
-
 .article__item {
   width: 50%;
   max-width: 650px;
@@ -98,6 +92,20 @@ a {
   display: flex;
   justify-content: center;
   flex-direction: column;
+}
+
+.not-found {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 10%;
+}
+
+@media screen and (max-width: 650px) {
+  .subheading {
+    font-size: 2rem;
+  }
 }
 
 @media screen and (max-width: 650px) {

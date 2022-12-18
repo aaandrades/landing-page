@@ -28,7 +28,21 @@
   gap: 20px;
 }
 
+.image {
+  margin-bottom: 1rem;
+  width: 50%;
+  height: auto;
+}
+
+.description {
+  font-weight: bold;
+}
+
 @media screen and (max-width: 850px) {
+  .image {
+    width: 80%;
+  }
+
   .subheading {
     transition: all ease-in 200ms;
     font-size: 3rem;
@@ -41,6 +55,12 @@
 }
 
 @media screen and (max-width: 650px) {
+  .image {
+    width: 10%;
+    margin: 0;
+    min-width: 50px;
+  }
+
   .subheading {
     font-size: 2rem;
   }

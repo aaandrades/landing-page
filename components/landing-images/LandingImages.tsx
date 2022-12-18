@@ -3,9 +3,9 @@ import React from "react";
 import styles from "./LandingImages.module.css";
 
 import FunkoPhoto from "../../public/profile_funko.png";
-import IronManPhoto from "../../public/ironman.png";
-import SuitPhoto from "../../public/suit.png";
-import PixarPhoto from "../../public/pixarprofile.png";
+// import IronManPhoto from "../../public/ironman.png";
+// import SuitPhoto from "../../public/suit.png";
+// import PixarPhoto from "../../public/pixarprofile.png";
 
 const LandingImages = () => {
   return (
