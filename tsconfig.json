@@ -27,7 +27,8 @@
     "app/home/layout.tsx",
     "app/home/page.tsx",
     ".next/types/**/*.ts",
-    "app/not-found.tsx"
+    "app/not-found.tsx",
+    "lib/ga.js"
   ],
   "exclude": ["node_modules"]
 }
