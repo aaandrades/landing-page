@@ -1,1 +1,1 @@
-Read only repository, asi es
+Read only repository
