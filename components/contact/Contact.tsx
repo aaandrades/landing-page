@@ -6,6 +6,7 @@ import ReactCanvasConfetti from "react-canvas-confetti";
 import Loader from "../common/loader/Loader";
 import { Player } from "@lottiefiles/react-lottie-player";
 import "animate.css";
+import { HttpClient } from "../../helpers/Http.client";
 
 const canvasStyles = {
   position: "fixed",
@@ -78,13 +79,11 @@ const Contact = () => {
 
   const handleEmail = async () => {
     try {
-      const promise = new Promise((resolve) =>
-        setTimeout(() => {
-          resolve(true);
-        }, 2000)
-      );
       setLoading(true);
-      await promise;
+      const httpClient = new HttpClient("/api/form");
+      const { name, email, message } = form;
+      const body = { email, name, message };
+      await httpClient.post(body);
       setSent(true);
       fire();
     } catch (error) {
