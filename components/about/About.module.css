@@ -6,7 +6,7 @@
 }
 
 .paragraph {
-  font-size: 1rem;
+  font-size: 1.1rem;
   padding-right: 10px;
   margin: 0 0 5rem 0;
   color: var(--tertiary);
@@ -36,11 +36,20 @@
 }
 
 .profile > img {
-  width: 45%;
+  width: 60%;
   height: auto;
-  border-radius: 100%;
+  border-radius: 10px;
   margin-bottom: 20px;
-  filter: drop-shadow(6px 1px 4px black);
+  filter: drop-shadow(2px 4px 6px black);
+}
+
+.perspective_right {
+  transform: perspective(1500px) rotateY(-15deg);
+  transition: transform 1s ease 0s;
+}
+
+.perspective_right:hover {
+  transform: perspective(3000px) rotateY(-5deg);
 }
 
 @media screen and (max-width: 850px) {
@@ -52,7 +61,7 @@
     margin-bottom: 2rem;
   }
   .profile > img {
-    width: 65%;
+    width: 80%;
   }
 }
 
@@ -63,7 +72,10 @@
   }
   .profile > img {
     margin-top: 20px;
-    width: 40%;
+    width: 80%;
+  }
+  .paragraph {
+    font-size: 1rem;
   }
 }
 

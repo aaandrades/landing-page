@@ -11,7 +11,7 @@ import Link from "next/link";
 import DownloadBtn from "../common/download-btn/DownloadBtn";
 import Image from "next/image";
 
-import Profile from "../../public/profile.png";
+import Profile from "../../public/profile4.jpg";
 import ReactImg from "../../public/react.png";
 import AngularImg from "../../public/angular.png";
 import NestJsImg from "../../public/nest.png";
@@ -23,6 +23,7 @@ import GitImg from "../../public/git.png";
 import JenkinsImg from "../../public/jenkins.png";
 import MongoDbImg from "../../public/mongodb.png";
 import PostgresqlImg from "../../public/postgresql.png";
+import ScrollGuide from "../scroll-guide/ScrollGuide";
 
 const About = () => {
   return (
@@ -95,10 +96,15 @@ const About = () => {
           </SwiperSlide>
         </Swiper>
       </article>
-      <article className={`article__item ${styles.profile}`}>
-        <Image src={Profile} width="400" alt="MercadoLibreLogo" />
+      <article
+        className={`article__item ${styles.profile} ${styles.perspective_right}`}
+      >
+        <Image src={Profile} width="500" alt="MercadoLibreLogo" />
         <DownloadBtn />
       </article>
+      <div className="scroll-guide">
+        <ScrollGuide id="contact" />
+      </div>
     </Layout>
   );
 };

@@ -87,7 +87,7 @@ a {
 
 .article__item {
   width: 50%;
-  max-width: 650px;
+  max-width: 750px;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -102,14 +102,20 @@ a {
   padding-top: 10%;
 }
 
-@media screen and (max-width: 650px) {
-  .subheading {
-    font-size: 2rem;
+@media screen and (max-width: 800px) {
+  .scroll-guide {
+    display: none;
   }
 }
 
 @media screen and (max-width: 650px) {
-  .article__item {
-    width: 100%;
+  .subheading {
+    font-size: 2rem;
+  }
+
+  @media screen and (max-width: 650px) {
+    .article__item {
+      width: 100%;
+    }
   }
 }
