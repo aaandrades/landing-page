@@ -1,5 +1,6 @@
 .container__item {
   margin-bottom: 2rem;
+  width: 270px;
 }
 
 .title__secondary {
@@ -12,19 +13,26 @@
 
 .paragraph {
   font-size: 1.5rem;
+  font-weight: 100;
   margin: 0;
   color: var(--tertiary);
+}
+
+.paragraph > span > a {
+  font-weight: 500;
 }
 
 .paragraph__secondary {
   font-size: 1.5rem;
   color: var(--tertiary);
-  margin: 10px 0 2rem 0;
+  margin: 10px 0 3rem 0;
+  font-weight: 100;
 }
 
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  width: 90%;
   gap: 20px;
 }
 
@@ -36,6 +44,11 @@
 
 .description {
   font-weight: bold;
+  word-break: break-word;
+}
+
+.skills {
+  align-items: center;
 }
 
 @media screen and (max-width: 850px) {
@@ -51,6 +64,10 @@
   .paragraph {
     margin: 10px 0px;
     font-size: 1.5rem;
+  }
+
+  .cards {
+    grid-template-columns: 30% 30% 30%;
   }
 }
 
@@ -73,7 +90,12 @@
     margin-top: 3rem;
   }
 
+  .description {
+    width: 200px;
+  }
+
   .cards {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;

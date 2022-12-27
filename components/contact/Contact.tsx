@@ -7,6 +7,7 @@ import Loader from "../common/loader/Loader";
 import { Player } from "@lottiefiles/react-lottie-player";
 import "animate.css";
 import { HttpClient } from "../../helpers/Http.client";
+import ScrollGuide from "../scroll-guide/ScrollGuide";
 
 const canvasStyles = {
   position: "fixed",
@@ -211,6 +212,9 @@ const Contact = () => {
       <footer className={styles.footer__container}>
         Made with ❤️ by Andres Andrade ©
       </footer>
+      <div className="scroll-guide">
+        <ScrollGuide id="home" top />
+      </div>
     </Layout>
   );
 };
