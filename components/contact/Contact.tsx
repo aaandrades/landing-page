@@ -116,9 +116,8 @@ const Contact = () => {
     <Layout id="contact">
       <article className={`article__item ${styles.height}`}>
         <h2 className={`subheading ${styles.heading}`}>Get in touch!</h2>
-        <p className={styles.info}>Email: aaandrades@outlook.com</p>
-        <p className={styles.info}>Phone: +1 905-783-5816</p>
-        <p className={styles.info}>Mississauga, Ontario, Canada</p>
+        <p className={styles.info}>aaandrades@outlook.com</p>
+        <p className={styles.info}>Toronto, Canada</p>
       </article>
       {sent ? (
         <article

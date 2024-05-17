@@ -4,14 +4,14 @@ import Script from "next/script";
 const HeadComponent = () => {
   return (
     <Head>
-      <title>Andres Andrade, Fullstack Software Developer</title>
+      <title>Andres Andrade, Fullstack Software Engineer</title>
       <meta
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
       <meta
         name="description"
-        content="Andres Alexander Andrade Sanchez, Fullstack software developer based in Mississauga, Ontario - Canada"
+        content="Andres Alexander Andrade Sanchez, Software Engineer"
       />
       <meta property="og:url" content="https://andres-andrade.dev/" />
       <meta property="og:type" content="website" />
@@ -19,7 +19,7 @@ const HeadComponent = () => {
       <meta name="twitter:card" content="summary" />
       <meta
         property="og:description"
-        content="Andres Alexander Andrade Sanchez, Fullstack software developer based in Mississauga, Ontario - Canada"
+        content="Andres Alexander Andrade Sanchez, Fullstack software engineer based in Toronto, Canada"
       />
       <meta
         property="og:image"
