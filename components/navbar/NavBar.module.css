@@ -155,6 +155,7 @@
 
 .card_link:hover {
   font-weight: bold;
+  color: var(--secondary);
   transition: font-weight 100ms ease-in-out;
 }
 
