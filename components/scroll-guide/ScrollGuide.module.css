@@ -1,6 +1,6 @@
 .scroll_container {
   position: absolute;
-  top: 50vh;
+  bottom: 50vh;
   right: 10px;
   transform: translate(0, -50%);
   display: flex;
