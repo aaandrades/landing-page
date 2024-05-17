@@ -114,14 +114,14 @@ const Contact = () => {
 
   return (
     <Layout id="contact">
-      <article className={`article__item ${styles.height}`}>
+      <article className="article__item">
         <h2 className={`subheading ${styles.heading}`}>Get in touch!</h2>
         <p className={styles.info}>aaandrades@outlook.com</p>
         <p className={styles.info}>Toronto, Canada</p>
       </article>
       {sent ? (
         <article
-          className={`article__item ${styles.form} ${styles.height} animate__animated animate__fadeIn`}
+          className={`article__item ${styles.form} animate__animated animate__fadeIn`}
         >
           {error ? (
             <>
