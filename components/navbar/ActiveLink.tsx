@@ -9,7 +9,6 @@ const ActiveLink = ({ children, id }: ActiveElement) => (
       className={`${styles.card_link}`}
       activeClass={styles.card_active}
       smooth
-      offset={-500}
       spy
       to={id}
       duration={300}
