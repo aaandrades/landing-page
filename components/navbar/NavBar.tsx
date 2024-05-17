@@ -1,6 +1,5 @@
 import styles from "./NavBar.module.css";
 import TalkBtn from "../talk-btn/TalkBtn";
-import { useRouter } from "next/router";
 import { useState } from "react";
 import ActiveLink from "./ActiveLink";
 import ActiveCard from "./ActiveCard";
@@ -8,10 +7,9 @@ import ActiveCard from "./ActiveCard";
 type THash = "home" | "services" | "about" | "contact";
 
 const NavBar = () => {
-  const [active, setActive] = useState("home");
   const [menu, setMenu] = useState(false);
 
-  const onChange = (value: string) => {
+  const onChange = () => {
     setMenu(false);
   };
 

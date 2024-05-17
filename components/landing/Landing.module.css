@@ -1,6 +1,6 @@
 .title {
   margin: 0;
-  color: var(--tertiary);
+  color: var(--white);
   font-size: 4rem;
   max-width: 650px;
   transition: all ease-in 200ms;
@@ -9,7 +9,7 @@
 
 .landing_paragraph {
   font-size: 1.5rem;
-  color: var(--tertiary);
+  color: var(--white);
   max-width: 650px;
   transition: all ease-in 200ms;
 }

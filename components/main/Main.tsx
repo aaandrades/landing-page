@@ -4,6 +4,7 @@ import Landing from "../landing/Landing";
 import Services from "../services/Services";
 import About from "../about/About";
 import Contact from "../contact/Contact";
+
 import styles from "./Main.module.css";
 
 const MainComponent = () => {

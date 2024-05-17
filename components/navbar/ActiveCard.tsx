@@ -7,12 +7,11 @@ const ActiveCard = ({ onChange, children, id }: ActiveElement) => {
   return (
     <div className={styles.card}>
       <Link
-        href={`#${id}`}
+        className="{styles.card_link}"
         activeClass={styles.card_active}
         smooth
         spy
         to={id}
-        hashSpy
         duration={300}
         onClick={() => (onChange ? onChange(id) : null)}
       >

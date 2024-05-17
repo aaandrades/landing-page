@@ -4,7 +4,7 @@
 }
 
 .title__secondary {
-  color: var(--tertiary);
+  color: var(--white);
 }
 
 .subheading {
@@ -15,7 +15,7 @@
   font-size: 1.5rem;
   font-weight: 100;
   margin: 0;
-  color: var(--tertiary);
+  color: var(--white);
 }
 
 .paragraph > span > a {
@@ -24,7 +24,7 @@
 
 .paragraph__secondary {
   font-size: 1.5rem;
-  color: var(--tertiary);
+  color: var(--white);
   margin: 10px 0 3rem 0;
   font-weight: 100;
 }

@@ -191,7 +191,7 @@ const Contact = () => {
             name="message"
             type="text"
             onChange={(target) => handleChange(target)}
-            placeholder="Ej: Hello! I want to hire you"
+            placeholder="Some cool message"
             title="Your message"
             required
           />

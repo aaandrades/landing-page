@@ -16,7 +16,7 @@ const TalkBtn = ({
   className = "",
 }: IProps) => {
   return (
-    <Link href="#services" smooth to="contact" hashSpy duration={300}>
+    <Link href="#contact" smooth to="contact" hashSpy duration={300}>
       <button
         type="button"
         title="Send a message!"

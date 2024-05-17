@@ -6,13 +6,13 @@ import { ActiveElement } from "../../interfaces/interfaces";
 const ActiveLink = ({ children, id }: ActiveElement) => (
   <li>
     <ScrollLink
-      href={`#${id}`}
+      className={`${styles.card_link}`}
       activeClass={styles.card_active}
       smooth
+      offset={-500}
       spy
       to={id}
       duration={300}
-      hashSpy
     >
       {children}
     </ScrollLink>

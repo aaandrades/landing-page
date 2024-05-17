@@ -4,8 +4,8 @@
 :root {
   --primary: #0070d9;
   --secondary: #f9c00b;
-  --tertiary: white;
-  --fourth: rgba(0, 32, 62, 1);
+  --white: white;
+  --secondary-bold: rgba(0, 32, 62, 1);
   --primary-over: #005cb3;
 }
 
@@ -66,13 +66,13 @@ a {
   top: 100%;
   width: 100%;
   height: 3px;
-  background-color: var(--tertiary);
+  background-color: var(--white);
   transform: scaleX(0);
   transition: transform 0.15s ease-in-out;
 }
 
 .link:hover {
-  color: var(--tertiary);
+  color: var(--white);
 }
 
 .link:hover::before {

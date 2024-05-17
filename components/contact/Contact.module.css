@@ -1,6 +1,6 @@
 .footer__container {
   font-size: 0.8rem;
-  color: var(--tertiary);
+  color: var(--white);
   text-align: center;
   font-weight: 100;
   position: absolute;
@@ -12,7 +12,7 @@
 }
 
 .info {
-  color: var(--tertiary);
+  color: var(--white);
   margin: 5px 0px;
 }
 
@@ -21,7 +21,7 @@
 }
 
 .form {
-  background-color: var(--tertiary);
+  background-color: var(--white);
   height: auto;
   padding: 2rem;
   border-radius: 6px;
@@ -37,7 +37,7 @@
   margin-top: 20px;
   outline: none;
   background-color: var(--primary);
-  color: var(--tertiary);
+  color: var(--white);
   border: none;
   border-radius: 6px;
   padding: 0.5rem 1rem;

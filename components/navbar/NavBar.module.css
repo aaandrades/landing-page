@@ -6,7 +6,7 @@
   background-color: transparent;
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
-  color: var(--tertiary);
+  color: var(--white);
 
   display: flex;
   align-items: center;
@@ -44,7 +44,7 @@
   width: 40%;
   min-width: 200px;
   transform-origin: left;
-  background-color: var(--fourth);
+  background-color: var(--secondary-bold);
   position: absolute;
   top: 0;
   left: 0;
@@ -96,7 +96,7 @@
   .burger_btn_line {
     width: 2rem;
     height: 4px;
-    background-color: var(--tertiary);
+    background-color: var(--white);
     border-radius: 20px;
     transition: all 0.5s;
     transform-origin: left;
@@ -128,7 +128,7 @@
 
 .aside_content {
   width: 100%;
-  background-color: var(--fourth);
+  background-color: var(--secondary-bold);
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -145,6 +145,17 @@
   margin-bottom: 20px;
   min-width: 115px;
   cursor: pointer;
+}
+
+.card_link {
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: font-weight 100ms ease-in-out;
+}
+
+.card_link:hover {
+  font-weight: bold;
+  transition: font-weight 100ms ease-in-out;
 }
 
 .card_active {
