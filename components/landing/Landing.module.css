@@ -33,6 +33,7 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  filter: drop-shadow(1px 4px 3px rgb(15, 15, 15));
 }
 
 .blob_container__secondary {
@@ -42,6 +43,7 @@
   left: 50%;
   top: 50%;
   transform: translate(-55%, -50%);
+  filter: drop-shadow(1px 4px 3px rgb(15, 15, 15));
 }
 
 .brands {

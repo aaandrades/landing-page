@@ -33,8 +33,8 @@ const About = () => {
           Let me introduce myself
         </h2>
         <p className={styles.paragraph}>
-          My name is Andrés Alexander Andrade Sanchez, I live in Mississauga,
-          Ontario - Canada. I&apos;m a Fullstack Software developer, specialized
+          My name is Andrés Alexander Andrade Sanchez, I live in Toronto,
+          Ontario - Canada. I&apos;m a Fullstack Software engineer, specialized
           in Frontend development. I have more than 5 years of experience
           creating amazing products and enjoying the journey.{" "}
           <Link
