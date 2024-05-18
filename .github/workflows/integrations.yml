@@ -13,12 +13,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Get major of current tag and previous tag
-        id: vars
+      - name: GitHub Tag Name example
         run: |
-          git fetch -a
-          echo ::set-output name=current_major::$(git tag --sort "-committerdate" | cut -d$'\n' -f1 | cut -d. -f1)
-          echo ::set-output name=previous_major::$(git tag --sort "-committerdate" | cut -d$'\n' -f2 | cut -d. -f1)
+          echo "Tag name from GITHUB_REF_NAME: $GITHUB_REF_NAME"
+          echo "Tag name from github.ref_name: ${{  github.ref_name }}"
       # - uses: actions/setup-node@v3
       #   with:
       #     node-version: 20
