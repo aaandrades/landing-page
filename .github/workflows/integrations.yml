@@ -1,0 +1,52 @@
+# Build release
+
+name: Build release
+
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Create Tags From
+        id: create_tag
+        uses: jaywcjlove/create-tag-action@v2.0.0
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          package-path: ./package.json
+
+      - name: Latest tag
+        run: echo ${{ steps.create_tag.outputs.tag }}
+      # - name: Create release from tag
+      #   id: create_release
+      #   uses: softprops/action-gh-release@v1
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #   with:
+      #     files: ./dist/*
+      #     tag_name: ${{ steps.create_tag.outputs.tag }}
+      #     release_name: ${{ steps.create_tag.outputs.tag }}
+      #     body: ${{ steps.create_tag.outputs.tag }}
+      #     draft: false
+      #     prerelease: false
+      # - name: Create a Release in a GitHub Action
+      #   uses: comnoco/create-release-action@v2.0.5
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #   with:
+      #     tag_name: ${{ github.ref }}
+      #     release_name: Release ${{ github.ref }}
+      #     body: |
+      #       Changes in this Release
+      #       - First Change
+      #       - Second Change
+      #     draft: false
+      #     prerelease: false
+      
+        
