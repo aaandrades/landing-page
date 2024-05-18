@@ -13,26 +13,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: GitHub Tag Name example
+        with:
+          fetch-depth: 0  # Fetch all history for all tags and branches
+
+      - name: Get Latest Tag
         run: |
-          echo "Tag name from GITHUB_REF_NAME: $GITHUB_REF_NAME"
-          echo "Tag name from github.ref_name: ${{  github.ref_name }}"
-      # - uses: actions/setup-node@v3
-      #   with:
-      #     node-version: 20
-      # - run: npm ci
+           latest_tag=$(git describe --tags $(git rev-list --tags --max-count=1))
+           echo "Latest Tag: $latest_tag"
+           echo "LATEST_TAG=$latest_tag" >> $GITHUB_ENV
 
-      # - name: Build release
-      #   run: npm run build
-      #   env:
-      #     NODE_ENV: production
-
-      - name: 'Get Previous tag'
-        id: previoustag
-        uses: "WyriHaximus/github-action-get-previous-tag@v1"
-
-      - name: 'Previous tag:'
-        run: echo ${{ steps.previoustag.outputs.tag }}
+      - name: Use Latest Tag
+        run: |
+           echo "The latest tag is ${{ env.LATEST_TAG }}"
 
       # - name: Create a Release in a GitHub Action
       #   uses: comnoco/create-release-action@v2.0.5
