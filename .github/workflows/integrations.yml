@@ -13,21 +13,28 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        # with:
-        #   fetch-depth: 0  # Fetch all history for all tags and branches
 
-      - name: Get Latest Tag
-        run: |
-           git tag -a v0.0.4 -m "Version 0.0.4"
-           echo "LATEST_TAG=$latest_tag" >> $GITHUB_ENV
-          #  latest_tag=$(git describe --tags $(git rev-list --tags --max-count=1))
-          #  echo "Latest Tag: $latest_tag"
-          #  echo "LATEST_TAG=$latest_tag" >> $GITHUB_ENV
+      - name: Create Tags From
+        id: create_tag
+        uses: jaywcjlove/create-tag-action@v2.0.0
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          package-path: ./package.json
 
-      - name: Use Latest Tag
-        run: |
-           echo "The latest tag is ${{ env.LATEST_TAG }}"
-
+      - name: Latest tag
+        run: echo ${{ steps.create_tag.outputs.tag }}
+      # - name: Create release from tag
+      #   id: create_release
+      #   uses: softprops/action-gh-release@v1
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #   with:
+      #     files: ./dist/*
+      #     tag_name: ${{ steps.create_tag.outputs.tag }}
+      #     release_name: ${{ steps.create_tag.outputs.tag }}
+      #     body: ${{ steps.create_tag.outputs.tag }}
+      #     draft: false
+      #     prerelease: false
       # - name: Create a Release in a GitHub Action
       #   uses: comnoco/create-release-action@v2.0.5
       #   env:
