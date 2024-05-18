@@ -1,0 +1,61 @@
+# Build release
+
+name: Build release
+
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Important: This is needed to fetch all tags
+
+      - name: Bump version and push tag
+        uses: anothrNick/github-tag-action@v1 # Don't use @master or @v1 unless you're happy to test the latest version
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # if you don't want to set write permissions use a PAT token
+          WITH_V: true
+
+      - name: Get latest tag
+        run: |
+          git fetch --tags
+          git describe --tags $(git rev-list --tags --max-count=1) > .github/latest_tag
+          # Add the latest tag to the environment
+          echo "LATEST_TAG=$(cat .github/latest_tag)" >> $GITHUB_ENV
+      - name: Latest tag
+        run: echo $LATEST_TAG
+
+      
+      # - name: Create release from tag
+      #   id: create_release
+      #   uses: softprops/action-gh-release@v1
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #   with:
+      #     files: ./dist/*
+      #     tag_name: ${{ steps.create_tag.outputs.tag }}
+      #     release_name: ${{ steps.create_tag.outputs.tag }}
+      #     body: ${{ steps.create_tag.outputs.tag }}
+      #     draft: false
+      #     prerelease: false
+      # - name: Create a Release in a GitHub Action
+      #   uses: comnoco/create-release-action@v2.0.5
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #   with:
+      #     tag_name: ${{ github.ref }}
+      #     release_name: Release ${{ github.ref }}
+      #     body: |
+      #       Changes in this Release
+      #       - First Change
+      #       - Second Change
+      #     draft: false
+      #     prerelease: false
+      
+        
