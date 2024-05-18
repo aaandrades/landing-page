@@ -22,12 +22,13 @@ jobs:
         run: npm run build
         env:
           NODE_ENV: production
+
       - name: 'Get Previous tag'
         id: previoustag
         uses: "WyriHaximus/github-action-get-previous-tag@v1"
 
-      - name: 'Current tag:'
-        run: echo ${{ github.ref }}
+      - name: 'Previous tag:'
+        run: echo ${{ steps.previoustag.outputs.tag }}
 
       - name: Create a Release in a GitHub Action
         uses: comnoco/create-release-action@v2.0.5
