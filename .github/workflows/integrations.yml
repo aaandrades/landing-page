@@ -13,15 +13,21 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 20
-      - run: npm ci
+      - name: Get major of current tag and previous tag
+        id: vars
+        run: |
+          git fetch -a
+          echo ::set-output name=current_major::$(git tag --sort "-committerdate" | cut -d$'\n' -f1 | cut -d. -f1)
+          echo ::set-output name=previous_major::$(git tag --sort "-committerdate" | cut -d$'\n' -f2 | cut -d. -f1)
+      # - uses: actions/setup-node@v3
+      #   with:
+      #     node-version: 20
+      # - run: npm ci
 
-      - name: Build release
-        run: npm run build
-        env:
-          NODE_ENV: production
+      # - name: Build release
+      #   run: npm run build
+      #   env:
+      #     NODE_ENV: production
 
       - name: 'Get Previous tag'
         id: previoustag
@@ -30,18 +36,18 @@ jobs:
       - name: 'Previous tag:'
         run: echo ${{ steps.previoustag.outputs.tag }}
 
-      - name: Create a Release in a GitHub Action
-        uses: comnoco/create-release-action@v2.0.5
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          tag_name: ${{ github.ref }}
-          release_name: Release ${{ github.ref }}
-          body: |
-            Changes in this Release
-            - First Change
-            - Second Change
-          draft: false
-          prerelease: false
+      # - name: Create a Release in a GitHub Action
+      #   uses: comnoco/create-release-action@v2.0.5
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #   with:
+      #     tag_name: ${{ github.ref }}
+      #     release_name: Release ${{ github.ref }}
+      #     body: |
+      #       Changes in this Release
+      #       - First Change
+      #       - Second Change
+      #     draft: false
+      #     prerelease: false
       
         
