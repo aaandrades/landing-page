@@ -32,21 +32,13 @@ jobs:
         run: echo $LATEST_TAG
 
       
-      # - name: Create release from tag
-      #   id: create_release
-      #   uses: softprops/action-gh-release@v1
-      #   env:
-      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      #   with:
-      #     files: ./dist/*
-      #     tag_name: ${{ steps.create_tag.outputs.tag }}
-      #     release_name: ${{ steps.create_tag.outputs.tag }}
-      #     body: ${{ steps.create_tag.outputs.tag }}
-      #     draft: false
-      #     prerelease: false
-      # - name: Create a Release in a GitHub Action
-      #   uses: comnoco/create-release-action@v2.0.5
-      #   env:
+      - name: Github Release
+        uses: elgohr/Github-Release-Action@20240405193535
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          title: ${{ env.LATEST_TAG }}
+    
       #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       #   with:
       #     tag_name: ${{ github.ref }}
