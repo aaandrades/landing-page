@@ -28,16 +28,15 @@ jobs:
 
       - name: Create a Release in a GitHub Action
         uses: comnoco/create-release-action@v2.0.5
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag: ${{ steps.previoustag.outputs.tag }}
-          token: ${{ secrets.GITHUB_TOKEN }}
-          files: dist/*
-          name: Release ${{ steps.previoustag.outputs.tag }}
+          tag_name: ${{ github.ref }}
+          release_name: Release ${{ github.ref }}
           body: |
-            Release ${{ steps.previoustag.outputs.tag }}
-            - [ ] Feature 1
-            - [ ] Feature 2
-            - [ ] Feature 3
+            Changes in this Release
+            - First Change
+            - Second Change
           draft: false
           prerelease: false
       
