@@ -1,4 +1,4 @@
-import { useState, useRef, useCallback } from "react";
+import { useState } from "react";
 import Layout from "../layout/Layout";
 import styles from "./Contact.module.css";
 import Input from "../common/input/Input";
@@ -8,6 +8,8 @@ import { Player } from "@lottiefiles/react-lottie-player";
 import "animate.css";
 import { HttpClient } from "../../helpers/Http.client";
 import ScrollGuide from "../scroll-guide/ScrollGuide";
+import MainActions from "../main-actions/MainActions";
+import { useFire } from "../../helpers/hooks/useFire";
 
 const canvasStyles = {
   position: "fixed",
@@ -18,64 +20,22 @@ const canvasStyles = {
   left: 0,
 };
 
+const INITIAL_STATE = {
+  name: "",
+  email: "",
+  message: "",
+};
+
 const Contact = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
   const [sent, setSent] = useState(false);
-  const [form, setForm] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-  const refAnimationInstance = useRef<any>(null);
+  const [form, setForm] = useState(INITIAL_STATE);
 
-  const getInstance = useCallback((instance: any) => {
-    refAnimationInstance.current = instance;
-  }, []);
-
-  const makeShot = useCallback((particleRatio: number, opts: any) => {
-    refAnimationInstance.current &&
-      refAnimationInstance.current({
-        ...opts,
-        origin: { y: 0.7 },
-        particleCount: Math.floor(200 * particleRatio),
-      });
-  }, []);
-
-  const fire = useCallback(() => {
-    makeShot(0.25, {
-      spread: 26,
-      startVelocity: 55,
-    });
-
-    makeShot(0.2, {
-      spread: 60,
-    });
-
-    makeShot(0.35, {
-      spread: 100,
-      decay: 0.91,
-      scalar: 0.8,
-    });
-
-    makeShot(0.1, {
-      spread: 120,
-      startVelocity: 25,
-      decay: 0.92,
-      scalar: 1.2,
-    });
-
-    makeShot(0.1, {
-      spread: 120,
-      startVelocity: 45,
-    });
-  }, [makeShot]);
+  const { fire, getInstance } = useFire();
 
   const handleChange = (target: any) => {
-    setForm((prevForm) => ({
-      ...prevForm,
-      [target.name]: target.value,
-    }));
+    setForm((prevForm) => ({ ...prevForm, [target.name]: target.value }));
   };
 
   const handleEmail = async () => {
@@ -84,7 +44,7 @@ const Contact = () => {
       const httpClient = new HttpClient("/api/form");
       const { name, email, message } = form;
       const body = { email, name, message };
-      await httpClient.post(body);
+      // await httpClient.post(body);
       setSent(true);
       fire();
     } catch (error) {
@@ -105,19 +65,20 @@ const Contact = () => {
   const resetForm = () => {
     setSent(false);
     setError(false);
-    setForm({
-      name: "",
-      email: "",
-      message: "",
-    });
+    setForm(INITIAL_STATE);
   };
 
   return (
     <Layout id="contact">
       <article className="article__item">
-        <h2 className={`subheading ${styles.heading}`}>Get in touch!</h2>
-        <p className={styles.info}>aaandrades@outlook.com</p>
-        <p className={styles.info}>Toronto, Canada</p>
+        <h2 className={`subheading ${styles.subheading} `}>
+          Do you have something
+          <span className={styles.title__secondary}> in mind</span>?
+        </h2>
+        {/* <h2 className={`subheading ${styles.heading}`}>Get in touch!</h2> */}
+        <MainActions social />
+        {/* <p className={styles.info}>aaandrades@outlook.com</p> */}
+        {/* <p className={styles.info}>Toronto, Canada</p> */}
       </article>
       {sent ? (
         <article
@@ -145,7 +106,7 @@ const Contact = () => {
           ) : (
             <>
               <span className={styles.response_header}>
-                Thanks for submit your information, we will be in touch soon!
+                Thanks for sending your information, we will get in touch soon!
               </span>
               <Player
                 autoplay
