@@ -11,6 +11,15 @@
   margin: 20px 0px 10px;
 }
 
+.subheading {
+  transition: all ease-in 200ms;
+  padding-right: 20px;
+}
+
+.title__secondary {
+  color: var(--white);
+}
+
 .info {
   color: var(--white);
   margin: 5px 0px;
@@ -24,7 +33,7 @@
   background-color: var(--white);
   height: auto;
   padding: 2rem;
-  border-radius: 6px;
+  border-radius: var(--border);
   transition: all cubic-bezier(0.17, 0.67, 0.83, 0.67) 200ms;
   box-shadow: 0 1px 1px hsl(0deg 0% 0% / 0.075),
     0 2px 2px hsl(0deg 0% 0% / 0.075), 0 4px 4px hsl(0deg 0% 0% / 0.075),
@@ -42,7 +51,7 @@
   background-color: var(--primary);
   color: var(--white);
   border: none;
-  border-radius: 6px;
+  border-radius: var(--border);
   padding: 0.5rem 1rem;
   cursor: pointer;
   transition: all ease-in 200ms;

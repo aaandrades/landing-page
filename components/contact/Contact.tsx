@@ -5,7 +5,6 @@ import Input from "../common/input/Input";
 import ReactCanvasConfetti from "react-canvas-confetti";
 import Loader from "../common/loader/Loader";
 import { Player } from "@lottiefiles/react-lottie-player";
-import "animate.css";
 import { HttpClient } from "../../helpers/Http.client";
 import ScrollGuide from "../scroll-guide/ScrollGuide";
 import MainActions from "../main-actions/MainActions";
@@ -44,6 +43,7 @@ const Contact = () => {
       const httpClient = new HttpClient("/api/form");
       const { name, email, message } = form;
       const body = { email, name, message };
+      throw new Error("Error sending message");
       // await httpClient.post(body);
       setSent(true);
       fire();
@@ -75,15 +75,10 @@ const Contact = () => {
           Do you have something
           <span className={styles.title__secondary}> in mind</span>?
         </h2>
-        {/* <h2 className={`subheading ${styles.heading}`}>Get in touch!</h2> */}
         <MainActions social />
-        {/* <p className={styles.info}>aaandrades@outlook.com</p> */}
-        {/* <p className={styles.info}>Toronto, Canada</p> */}
       </article>
       {sent ? (
-        <article
-          className={`article__item ${styles.form} animate__animated animate__fadeIn`}
-        >
+        <article className={`article__item ${styles.form}`}>
           {error ? (
             <>
               <span className={styles.response_header}>

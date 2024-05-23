@@ -1,79 +1,62 @@
 import Layout from "../layout/Layout";
 import styles from "./Services.module.css";
-// import Card from "../common/card/Card";
-// import Image from "next/image";
 
-// import Web from "../../public/web.png";
-// import Mobile from "../../public/mobile.png";
-// import Custom from "../../public/custom.png";
 import ScrollGuide from "../scroll-guide/ScrollGuide";
 
 const Services = () => {
   return (
     <Layout id="services">
       <article className={`article__item ${styles.secondary}`}>
-        <h2 className={`subheading ${styles.subheading} `}>
-          Do you have something
-          <span className={styles.title__secondary}> in mind</span>?
-        </h2>
-        <p className={styles.paragraph__secondary}>I can help you</p>
-        {/* <div className={styles.cards}>
-          <Card>
-            <Image
-              src={Mobile}
-              width="200"
-              alt="Custom"
-              className={styles.image}
-            />
-            <span className={styles.description}>
-              Mobile Design & Development
-            </span>
-          </Card>
-          <Card>
-            <Image
-              src={Web}
-              width="200"
-              alt="Custom"
-              className={styles.image}
-            />
-            <span lang="en" className={styles.description}>
-              Web Design & Development
-            </span>
-          </Card>
-          <Card>
-            <Image
-              src={Custom}
-              width="200"
-              alt="Custom"
-              className={styles.image}
-            />
-            <span className={styles.description}>Customized services</span>
-          </Card>
-        </div> */}
+        <h2 className={`subheading ${styles.subheading} `}>Who am I?</h2>
+        <p className={styles.paragraph}>
+          I&apos;m Andres but everybody calls me Andy, your friendly
+          neighborhood software engineer based in Toronto, Canada. With six
+          years of code-slinging experience under my belt, I&apos;ve navigated
+          through the wilds of frontend, backend, fullstack, and mobile
+          development. You could say I&apos;m a bit of a digital Swiss Army
+          knife—ready to tackle any tech challenge thrown my way.
+        </p>
+        <p className={styles.paragraph}>
+          When I&apos;m not busy building seamless CI/CD integrations or hunting
+          down the latest tech trends, you&apos;ll find me either sweating it
+          out on the sports field or glued to my gaming setup. And if you catch
+          me offline (rare, I know), I&apos;m probably tinkering away on a
+          hands-on project, channeling my inner MacGyver.
+        </p>
+        <p className={styles.paragraph}>
+          Welcome to my corner of the internet, where code meets creativity and
+          every bug has its day!
+        </p>
       </article>
       <article className={`article__item ${styles.secondary} ${styles.skills}`}>
         <div className={styles.container__item}>
-          <h2 className={`subheading ${styles.subheading}`}>5+</h2>
-          <p className={styles.paragraph}>Years of experience</p>
+          <h2 className={`subheading ${styles.subheading}`}>6+</h2>
+          <p className={styles.description}>Years of experience</p>
         </div>
         <div className={styles.container__item}>
-          <h2 className={`subheading ${styles.subheading}`}>10+</h2>
-          <p className={styles.paragraph}>Big freelance jobs done</p>
+          <h2 className={`subheading ${styles.subheading}`}>Posts</h2>
+          <p className={styles.description}>
+            Looking for {"  "}
+            <a
+              className="link"
+              href="https://medium.com/@andradesanchezandres"
+              target="blank"
+            >
+              Medium?
+            </a>
+          </p>
         </div>
         <div className={styles.container__item}>
           <h2 className={`subheading ${styles.subheading}`}>Projects</h2>
-          <p className={styles.paragraph}>
-            Check out my
-            <span>
-              {" "}
-              <a
-                className="link"
-                href="https://github.com/aaandrades"
-                target="blank"
-              >
-                Github!
-              </a>
-            </span>
+          <p className={styles.description}>
+            Check out my{"  "}
+            <a
+              className="link"
+              href="https://github.com/aaandrades"
+              target="blank"
+            >
+              Github!
+            </a>
           </p>
         </div>
       </article>

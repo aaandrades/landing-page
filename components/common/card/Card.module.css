@@ -2,7 +2,7 @@
   background-color: var(--white);
   color: var(--primary);
   margin: 5px 0px;
-  border-radius: 6px;
+  border-radius: var(--border);
   padding: 10px;
   position: relative;
   transform-style: preserve-3d;
@@ -27,7 +27,7 @@
 
 .card_container::before {
   content: "";
-  border-radius: 6px;
+  border-radius: var(--border);
   position: absolute;
   background-color: var(--secondary);
   width: 100%;

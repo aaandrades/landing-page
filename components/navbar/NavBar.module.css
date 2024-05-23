@@ -139,7 +139,7 @@
 
 .card {
   width: 50%;
-  border-radius: 6px;
+  border-radius: var(--border);
   text-align: center;
   padding: 0px;
   margin-bottom: 20px;

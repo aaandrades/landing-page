@@ -20,7 +20,7 @@ const InteractiveBlob = () => {
       zoom: 0,
       x: 0,
       y: 0,
-      config: { mass: 20, tension: 2000, friction: 800 },
+      config: { mass: 20, tension: 1000, friction: 800 },
     })
   );
 
@@ -39,6 +39,7 @@ const InteractiveBlob = () => {
 
   return (
     <animated.div
+      // <div
       ref={domTarget}
       className={styles.blob_container}
       style={{
@@ -54,6 +55,7 @@ const InteractiveBlob = () => {
       <LandingImages />
       <YellowBlob className={styles.blob_container__secondary} />
       <BlueBlob className={styles.blob_container__main} />
+      {/* </div> */}
     </animated.div>
   );
 };
