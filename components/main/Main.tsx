@@ -1,35 +1,23 @@
-import React, { useEffect } from "react";
+import React from "react";
 import NavBar from "../navbar/NavBar";
 import Landing from "../landing/Landing";
-import Services from "../services/Services";
 import About from "../about/About";
+import Skills from "../skills/Skills";
 import Contact from "../contact/Contact";
 
 import styles from "./Main.module.css";
+import Experience from "../experience/Experience";
 
-const MainComponent = () => {
-  useEffect(() => {
-    // window.addEventListener(
-    //   "scroll",
-    //   () => {
-    //     document.body.style.setProperty(
-    //       "--scroll",
-    //       window.pageYOffset / (document.body.offsetHeight - window.innerHeight)
-    //     );
-    //   },
-    //   false
-    // );
-  }, []);
-  return (
-    <main className={styles.container}>
-      <NavBar />
-      <Landing />
-      <Services />
-      <About />
-      <Contact />
-      <div id="modal-root"></div>
-    </main>
-  );
-};
+const MainComponent = () => (
+  <main className={styles.container}>
+    <NavBar />
+    <Landing />
+    <About />
+    <Experience />
+    <Skills />
+    <Contact />
+    <div id="modal-root"></div>
+  </main>
+);
 
 export default MainComponent;

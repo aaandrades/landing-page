@@ -1,7 +1,7 @@
 import { Link as ScrollLink } from "react-scroll";
 import React from "react";
 import styles from "./NavBar.module.css";
-import { ActiveElement } from "../../interfaces/interfaces";
+import { ActiveElement } from "../../interfaces/types";
 
 const ActiveLink = ({ children, id }: ActiveElement) => (
   <li>

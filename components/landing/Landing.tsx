@@ -17,7 +17,7 @@ const Landing = () => (
         <InteractiveBlob />
       </article>
     </Layout>
-    <ScrollGuide id="services" />
+    <ScrollGuide id="about" />
   </>
 );
 

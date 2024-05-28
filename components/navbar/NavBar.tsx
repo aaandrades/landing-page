@@ -35,11 +35,14 @@ const NavBar = () => {
           <ActiveCard onChange={onChange} id="home">
             Home
           </ActiveCard>
-          <ActiveCard onChange={onChange} id="services">
-            Services
-          </ActiveCard>
           <ActiveCard onChange={onChange} id="about">
             About
+          </ActiveCard>
+          <ActiveCard onChange={onChange} id="experience">
+            Experience
+          </ActiveCard>
+          <ActiveCard onChange={onChange} id="skills">
+            Skills
           </ActiveCard>
           <ActiveCard onChange={onChange} id="contact">
             Contact
@@ -52,11 +55,14 @@ const NavBar = () => {
         <ActiveLink onChange={onChange} id="home">
           Home
         </ActiveLink>
-        <ActiveLink onChange={onChange} id="services">
-          Services
-        </ActiveLink>
         <ActiveLink onChange={onChange} id="about">
           About
+        </ActiveLink>
+        <ActiveLink onChange={onChange} id="experience">
+          Experience
+        </ActiveLink>
+        <ActiveLink onChange={onChange} id="skills">
+          Skills
         </ActiveLink>
         <ActiveLink onChange={onChange} id="contact">
           Contact
