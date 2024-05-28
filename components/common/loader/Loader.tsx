@@ -2,13 +2,10 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 import styles from "./Loader.module.css";
-
-interface IProps {
-  show: boolean;
-}
+import { ILoader } from "../../../interfaces/types";
 
 // Laoder using react portal
-const Loader = ({ show }: IProps) => {
+const Loader = ({ show }: ILoader) => {
   const content = () => (
     <div className={styles.body}>
       <div className={styles.mexican_wave}></div>

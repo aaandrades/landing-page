@@ -9,21 +9,7 @@ import { HttpClient } from "../../helpers/Http.client";
 import ScrollGuide from "../scroll-guide/ScrollGuide";
 import MainActions from "../main-actions/MainActions";
 import { useFire } from "../../helpers/hooks/useFire";
-
-const canvasStyles = {
-  position: "fixed",
-  pointerEvents: "none",
-  width: "100%",
-  height: "100%",
-  top: 0,
-  left: 0,
-};
-
-const INITIAL_STATE = {
-  name: "",
-  email: "",
-  message: "",
-};
+import { INITIAL_STATE, canvasStyles } from "../../helpers/constants";
 
 const Contact = () => {
   const [loading, setLoading] = useState(false);
@@ -43,13 +29,11 @@ const Contact = () => {
       const httpClient = new HttpClient("/api/form");
       const { name, email, message } = form;
       const body = { email, name, message };
-      throw new Error("Error sending message");
-      // await httpClient.post(body);
+      await httpClient.post(body);
       setSent(true);
       fire();
     } catch (error) {
-      console.error("Error sending message");
-      console.error(error);
+      console.error("Error sending message", error);
       setSent(true);
       setError(true);
     } finally {

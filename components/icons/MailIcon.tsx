@@ -1,5 +1,5 @@
 import React from "react";
-import { IIcons } from "../../interfaces/interfaces";
+import { IIcons } from "../../interfaces/types";
 
 export const MailIcon = ({ width, className = "" }: IIcons) => (
   <svg

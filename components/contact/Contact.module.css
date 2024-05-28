@@ -20,15 +20,6 @@
   color: var(--white);
 }
 
-.info {
-  color: var(--white);
-  margin: 5px 0px;
-}
-
-.heading {
-  margin-bottom: 1rem;
-}
-
 .form {
   background-color: var(--white);
   height: auto;
@@ -82,10 +73,6 @@
 }
 
 @media screen and (max-width: 850px) {
-  .heading {
-    font-size: 3rem;
-    transition: all cubic-bezier(0.17, 0.67, 0.83, 0.67) 200ms;
-  }
   .form {
     padding: 1rem;
     transition: all cubic-bezier(0.17, 0.67, 0.83, 0.67) 200ms;
@@ -93,11 +80,6 @@
 }
 
 @media screen and (max-width: 650px) {
-  .heading {
-    margin-top: 3rem;
-    font-size: 2rem;
-  }
-
   .response_header {
     margin-top: 2rem;
   }

@@ -39,7 +39,6 @@ const InteractiveBlob = () => {
 
   return (
     <animated.div
-      // <div
       ref={domTarget}
       className={styles.blob_container}
       style={{
@@ -55,7 +54,6 @@ const InteractiveBlob = () => {
       <LandingImages />
       <YellowBlob className={styles.blob_container__secondary} />
       <BlueBlob className={styles.blob_container__main} />
-      {/* </div> */}
     </animated.div>
   );
 };
