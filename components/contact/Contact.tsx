@@ -151,9 +151,9 @@ const Contact = () => {
       <footer className={styles.footer__container}>
         Made with ❤️ by Andres Andrade ©
       </footer>
-      <div className="scroll-guide">
+      {/* <div className="scroll-guide">
         <ScrollGuide id="home" top />
-      </div>
+      </div> */}
     </Layout>
   );
 };

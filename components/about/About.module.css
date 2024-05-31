@@ -43,6 +43,7 @@
 
   .secondary {
     margin-top: 3rem;
+    flex-wrap: wrap;
   }
 
   .skills {
@@ -55,7 +56,6 @@
   }
 
   .skills > .container__item {
-    width: 30%;
     min-width: 110px;
     border-radius: var(--border);
   }

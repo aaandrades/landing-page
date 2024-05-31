@@ -63,9 +63,9 @@ const About = () => (
         </div>
       </div>
     </article>
-    <div className="scroll-guide">
+    {/* <div className="scroll-guide">
       <ScrollGuide id="experience" />
-    </div>
+    </div> */}
   </Layout>
 );
 

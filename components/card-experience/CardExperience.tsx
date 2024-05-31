@@ -26,7 +26,8 @@ const CardExperience = () => (
         </h3>
         <p className={styles.date}>{experience.date}</p>
         <p className="paragraph">{experience.description}</p>
-        <p className={styles.technologies}>Technologies</p>
+        {/* Temporally disabled */}
+        {/* <p className={styles.technologies}>Technologies</p> */}
       </li>
     ))}
   </ul>

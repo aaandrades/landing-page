@@ -6,10 +6,6 @@
   margin-top: 1rem;
 }
 
-.container_mobile {
-  display: none;
-}
-
 .action_btn {
   padding: 10px;
   width: 130px;
@@ -38,16 +34,9 @@
 
 @media screen and (max-width: 650px) {
   .container {
-    display: none;
-  }
-
-  .container_mobile {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     width: 100%;
-    margin-top: 1rem;
-    animation: floating 2s infinite;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 }
 
@@ -56,8 +45,8 @@
     display: none;
   }
 
-  .container > a {
-    display: none;
+  .container {
+    gap: 10px;
   }
 }
 

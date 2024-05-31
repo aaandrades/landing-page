@@ -79,11 +79,14 @@
   .title {
     transition: all ease-in 200ms;
     font-size: 2rem;
+    text-align: center;
+    line-height: normal;
   }
-
+  
   .landing_paragraph {
     transition: all ease-in 200ms;
     font-size: 1rem;
+    text-align: center;
   }
 
   .landing__bottom {

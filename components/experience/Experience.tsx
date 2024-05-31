@@ -32,9 +32,9 @@ const Experience = () => (
         ))}
       </div>
     </article>
-    <div className="scroll-guide">
+    {/* <div className="scroll-guide">
       <ScrollGuide id="skills" />
-    </div>
+    </div> */}
   </Layout>
 );
 

@@ -6,8 +6,8 @@ import styles from "./NavBar.module.css";
 const ActiveCard = ({ onChange, children, id }: ActiveElement) => (
   <div className={styles.card}>
     <Link
-      className="{styles.card_link}"
       activeClass={styles.card_active}
+      href={`#${id}`}
       smooth
       spy
       to={id}

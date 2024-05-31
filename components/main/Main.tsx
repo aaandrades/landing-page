@@ -7,9 +7,11 @@ import Contact from "../contact/Contact";
 
 import styles from "./Main.module.css";
 import Experience from "../experience/Experience";
+import ProgressBar from "../progress/ProgressBar";
 
 const MainComponent = () => (
   <main className={styles.container}>
+    <ProgressBar />
     <NavBar />
     <Landing />
     <About />

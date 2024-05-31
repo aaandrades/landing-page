@@ -19,9 +19,14 @@
   max-width: 1600px;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-height: 900px) {
   .background {
-    padding: 75px 4rem 4rem 4rem;
+    min-height: 100vh;
+    height: 100%;
+    padding-top: 100px;
+  }
+  .background__reverse {
+    padding-top: 0;
   }
 }
 
@@ -30,6 +35,7 @@
     flex-direction: column;
     padding: 3rem 1rem 1rem;
     height: auto;
+    min-height: 50vh;
   }
 
   .background__reverse {
@@ -40,5 +46,19 @@
 
   .background__invert {
     flex-direction: column-reverse;
+  }
+}
+
+@media screen and (max-width: 250px) {
+  .background {
+    flex-direction: column;
+    padding: 3rem 1rem 1rem;
+    height: auto;
+    min-height: auto;
+  }
+  .background__reverse {
+    display: flex;
+    flex-direction: column-reverse;
+    height: 100vh;
   }
 }

@@ -14,7 +14,7 @@ const InteractiveHeader = () => {
   return (
     <animated.div key={trails.opacity.id} style={trails}>
       <h1 className={styles.title}>
-        Hi!
+        <span>Hi!</span>
         <br></br>I am
         <span className={styles.title__name}> Andrés Andrade</span>
       </h1>
