@@ -19,7 +19,7 @@
 .container__list {
   list-style: none;
   display: flex;
-  width: 50%;
+  width: 100%;
   max-width: 600px;
   align-items: center;
   justify-content: space-between;
@@ -52,13 +52,6 @@
   -webkit-box-shadow: 6px 0px 7px -3px rgb(18 18 18 / 75%);
   -moz-box-shadow: 6px 0px 7px -3px rgb(18 18 18 / 75%);
   box-shadow: 6px 0px 7px -3px rgb(18 18 18 / 75%);
-}
-
-@media only screen and (max-width: 800px) {
-  .container__list {
-    width: 100%;
-    transition: all ease-in 200ms;
-  }
 }
 
 @media only screen and (max-width: 650px) {

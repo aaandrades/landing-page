@@ -2,12 +2,32 @@
   min-width: 600px;
 }
 
+@media screen and (max-width: 800px) {
+  .container {
+    min-width: auto;
+  }
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+}
+
 .paragraph {
   font-size: 1.5rem;
   padding-right: 10px;
   margin: 0 0 3rem 0;
   color: var(--white);
 }
+
+.group__icons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
 .group__title {
   font-size: 1rem;
   font-weight: 500;
@@ -16,8 +36,8 @@
 }
 
 .group__item {
-  margin-right: 1rem;
   box-shadow: var(--box-shadow);
+  filter: grayscale(1);
 }
 
 .group__item:hover {

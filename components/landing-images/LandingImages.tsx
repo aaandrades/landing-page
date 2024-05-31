@@ -11,7 +11,7 @@ const LandingImages = () => (
       className={`${styles.blob_container__profile} ${styles.ia} funko`}
       width="500"
       alt="Profile"
-      priority
+      priority={true}
     />
     <span className={styles.blob_container__text}>What is this?</span>
     <span className={styles.tooltip}>

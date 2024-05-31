@@ -1,7 +1,6 @@
 import React from "react";
 import Layout from "../layout/Layout";
 import CardExperience from "../card-experience/CardExperience";
-import ScrollGuide from "../scroll-guide/ScrollGuide";
 import Image from "next/image";
 import styles from "./Experience.module.css";
 import { otherCompanies } from "../../helpers/constants";
@@ -32,9 +31,6 @@ const Experience = () => (
         ))}
       </div>
     </article>
-    <div className="scroll-guide">
-      <ScrollGuide id="skills" />
-    </div>
   </Layout>
 );
 

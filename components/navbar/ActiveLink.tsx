@@ -8,6 +8,7 @@ const ActiveLink = ({ children, id }: ActiveElement) => (
     <ScrollLink
       className={`${styles.card_link}`}
       activeClass={styles.card_active}
+      href={`#${id}`}
       smooth
       spy
       to={id}
