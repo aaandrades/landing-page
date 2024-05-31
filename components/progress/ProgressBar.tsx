@@ -17,6 +17,9 @@ const ProgressBar = () => {
       },
       false
     );
+    return () => {
+      window.removeEventListener("scroll", () => {});
+    };
   }, []);
 
   return <div className="progress"></div>;

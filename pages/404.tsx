@@ -6,7 +6,7 @@ const NotFound = () => {
       <Player
         autoplay
         loop
-        src="https://assets2.lottiefiles.com/packages/lf20_ghfpce1h.json"
+        src="/notfound.json"
         style={{ width: "50vh" }}
       />
     </div>
