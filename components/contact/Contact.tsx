@@ -6,7 +6,6 @@ import ReactCanvasConfetti from "react-canvas-confetti";
 import Loader from "../common/loader/Loader";
 import { Player } from "@lottiefiles/react-lottie-player";
 import { HttpClient } from "../../helpers/Http.client";
-import ScrollGuide from "../scroll-guide/ScrollGuide";
 import MainActions from "../main-actions/MainActions";
 import { useFire } from "../../helpers/hooks/useFire";
 import { INITIAL_STATE, canvasStyles } from "../../helpers/constants";
@@ -151,9 +150,6 @@ const Contact = () => {
       <footer className={styles.footer__container}>
         Made with ❤️ by Andres Andrade ©
       </footer>
-      {/* <div className="scroll-guide">
-        <ScrollGuide id="home" top />
-      </div> */}
     </Layout>
   );
 };
