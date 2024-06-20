@@ -8,7 +8,6 @@
   align-items: center;
   justify-content: center;
   flex-direction: row;
-  scroll-snap-align: start;
   width: 100%;
 }
 
@@ -35,7 +34,7 @@
     flex-direction: column;
     padding: 3rem 1rem 1rem;
     height: auto;
-    min-height: 50vh;
+    min-height: 100vh;
   }
 
   .background__reverse {

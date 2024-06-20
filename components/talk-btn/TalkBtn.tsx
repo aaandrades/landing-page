@@ -10,7 +10,7 @@ const TalkBtn = ({
   className = "",
 }: ITalkBtn) => {
   return (
-    <Link href="#contact" smooth to="contact" hashSpy duration={300}>
+    <Link href="#contact" to="contact" hashSpy duration={300}>
       <button
         type="button"
         title="Send a message!"

@@ -1,28 +1,29 @@
 import React from "react";
-import styles from "./ProgressBar.module.css";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import ReactCanvasConfetti from "react-canvas-confetti";
+import { fixedCanvasStyles } from "../../helpers/constants";
+
+import { useFire } from "../../helpers/hooks/useFire";
+import { useScroll } from "../../helpers/hooks/useScroll";
 
 const ProgressBar = () => {
-  useEffect(() => {
-    window.addEventListener(
-      "scroll",
-      () => {
-        document.body.style.setProperty(
-          "--scroll",
-          `${
-            window.pageYOffset /
-            (document.body.offsetHeight - window.innerHeight)
-          }`
-        );
-      },
-      false
-    );
-    return () => {
-      window.removeEventListener("scroll", () => {});
-    };
-  }, []);
+  const final = useScroll();
+  const { fire, getInstance } = useFire();
 
-  return <div className="progress"></div>;
+  useEffect(() => {
+    if (final) {
+      fire();
+    }
+  }, [final, fire]);
+
+  return (
+    <div className="progress">
+      <ReactCanvasConfetti
+        refConfetti={getInstance}
+        style={fixedCanvasStyles as any}
+      />
+    </div>
+  );
 };
 
 export default ProgressBar;

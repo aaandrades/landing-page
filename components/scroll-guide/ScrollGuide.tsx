@@ -4,7 +4,7 @@ import styles from "./ScrollGuide.module.css";
 import { IScrollGuide } from "../../interfaces/types";
 
 const ScrollGuide = ({ id, top = false }: IScrollGuide) => (
-  <Link smooth href={`#${id}`} to={id} duration={300} hashSpy title="navigate">
+  <Link href={`#${id}`} to={id} duration={300} hashSpy title="navigate">
     <div className={styles.scroll_container}>
       <div className={styles.scroll_container__field}>
         <div className={styles.scroll_container__mouse}></div>
@@ -17,4 +17,3 @@ const ScrollGuide = ({ id, top = false }: IScrollGuide) => (
 );
 
 export default ScrollGuide;
-``;

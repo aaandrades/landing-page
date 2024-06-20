@@ -1,5 +1,6 @@
 .container {
   min-width: 600px;
+  position: relative;
 }
 
 @media screen and (max-width: 800px) {
@@ -9,6 +10,7 @@
 }
 
 .list {
+  display: none;
   list-style: none;
   padding: 0;
 }
@@ -49,6 +51,32 @@
   margin-bottom: 1rem;
 }
 
+.skills {
+  z-index: 0;
+  position: relative;
+  min-height: 500px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.skills p {
+  position: absolute;
+  color: white;
+  z-index: -1;
+  left: 0;
+  right: 0;
+  font-weight: 900;
+  -webkit-user-select: none;
+  user-select: none;
+  filter: opacity(0.2);
+}
+
+.skills svg {
+  margin: 0 30px;
+}
+
 @media screen and (max-width: 850px) {
   .heading {
     font-size: 3rem;
@@ -64,7 +92,16 @@
     margin-top: 3rem;
     font-size: 2rem;
   }
+
+  .list {
+    display: block;
+  }
+
   .paragraph {
     font-size: 1rem;
+  }
+
+  .skills {
+    display: none;
   }
 }

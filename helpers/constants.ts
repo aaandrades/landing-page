@@ -174,3 +174,12 @@ export const canvasStyles = {
   top: 0,
   left: 0,
 };
+
+export const fixedCanvasStyles = {
+  position: "fixed",
+  pointerEvents: "none",
+  width: "30%",
+  height: "30%",
+  top: 0,
+  right: 0,
+};
