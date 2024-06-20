@@ -1,85 +1,37 @@
 import Layout from "../layout/Layout";
 import styles from "./Skills.module.css";
+import DesktopSkills from "./DesktopSkills";
+import MobileSkills from "./MobileSkills";
+import { useInView } from "framer-motion";
+import { useRef } from "react";
 
-import { BACKEND, DB, FRONTEND, LANGUAGES } from "../../helpers/constants";
-import Image from "next/image";
+const Skills = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
 
-const Skills = () => (
-  <Layout id="skills">
-    <article className={`article__full-width ${styles.container} `}>
-      <h2 className={`subheading ${styles.heading}`}>Technical skills</h2>
-      <p className={styles.paragraph}>
-        &quot;Once you stop learning, you start dying.&quot; — Albert Einstein,
-        1955
-      </p>
-      <ul className={styles.list}>
-        <li>
-          <h3 className={`${styles.group__title}`}>Languages</h3>
-          <div className={`${styles.group__icons}`}>
-            {LANGUAGES.map((logo) => (
-              <Image
-                className={`${styles.group__item}`}
-                key={logo.name}
-                src={logo.file}
-                height={logo.height}
-                width={logo.width}
-                alt={logo.name}
-                loading="lazy"
-              />
-            ))}
-          </div>
-        </li>
-        <li>
-          <h3 className={`${styles.group__title}`}>Frontend</h3>
-          <div className={`${styles.group__icons}`}>
-            {FRONTEND.map((logo) => (
-              <Image
-                className={`${styles.group__item}`}
-                key={logo.name}
-                src={logo.file}
-                height={logo.height}
-                width={logo.width}
-                alt={logo.name}
-                loading="lazy"
-              />
-            ))}
-          </div>
-        </li>
-        <li>
-          <h3 className={`${styles.group__title}`}>Backend</h3>
-          <div className={`${styles.group__icons}`}>
-            {BACKEND.map((logo) => (
-              <Image
-                className={`${styles.group__item}`}
-                key={logo.name}
-                src={logo.file}
-                height={logo.height}
-                width={logo.width}
-                alt={logo.name}
-                loading="lazy"
-              />
-            ))}
-          </div>
-        </li>
-        <li>
-          <h3 className={`${styles.group__title}`}>DB</h3>
-          <div className={`${styles.group__icons}`}>
-            {DB.map((logo) => (
-              <Image
-                className={`${styles.group__item}`}
-                key={logo.name}
-                src={logo.file}
-                height={logo.height}
-                width={logo.width}
-                alt={logo.name}
-                loading="lazy"
-              />
-            ))}
-          </div>
-        </li>
-      </ul>
-    </article>
-  </Layout>
-);
+  return (
+    <Layout id="skills">
+      <article className={`article__full-width ${styles.container} `} ref={ref}>
+        <h2 className={`subheading ${styles.heading}`} ref={ref}>
+          Technical skills
+        </h2>
+        <p
+          className={styles.paragraph}
+          style={{
+            transform: isInView ? "none" : "translateX(200px)",
+            opacity: isInView ? 1 : 0,
+            transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+          }}
+        >
+          &quot;Once you stop learning, you start dying.&quot; — Albert
+          Einstein, 1955
+        </p>
+
+        <DesktopSkills isInView={isInView} />
+        <MobileSkills isInView={isInView} />
+      </article>
+    </Layout>
+  );
+};
 
 export default Skills;

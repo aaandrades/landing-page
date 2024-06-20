@@ -80,6 +80,9 @@
 }
 
 @media screen and (max-width: 650px) {
+  .subheading {
+    text-align: center;
+  }
   .response_header {
     margin-top: 2rem;
   }
