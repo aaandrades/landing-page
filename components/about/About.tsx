@@ -1,8 +1,6 @@
 import Layout from "../layout/Layout";
 import styles from "./About.module.css";
 
-import ScrollGuide from "../scroll-guide/ScrollGuide";
-
 const About = () => (
   <Layout id="about">
     <article className={`article__full-width ${styles.secondary}`}>

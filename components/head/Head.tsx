@@ -1,17 +1,13 @@
 import Head from "next/head";
-import Script from "next/script";
 
 const HeadComponent = () => {
   return (
     <Head>
       <title>Andres Andrade, Fullstack Software Engineer</title>
-      <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1"
-      />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta
         name="description"
-        content="Andres Alexander Andrade Sanchez, Software Engineer"
+        content="Andres Alexander Andrade Sanchez, Fullstack Software Engineer"
       />
       <meta property="og:url" content="https://andres-andrade.dev/" />
       <meta property="og:type" content="website" />
@@ -19,7 +15,7 @@ const HeadComponent = () => {
       <meta name="twitter:card" content="summary" />
       <meta
         property="og:description"
-        content="Andres Alexander Andrade Sanchez, Fullstack software engineer based in Toronto, Canada"
+        content="Andres Alexander Andrade Sanchez, Fullstack Software Engineer, Canada"
       />
       <meta
         property="og:image"

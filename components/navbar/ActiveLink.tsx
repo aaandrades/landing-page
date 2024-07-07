@@ -11,7 +11,7 @@ const ActiveLink = ({ children, id }: ActiveElement) => (
       href={`#${id}`}
       spy
       to={id}
-      duration={300}
+      duration={100}
     >
       {children}
     </ScrollLink>

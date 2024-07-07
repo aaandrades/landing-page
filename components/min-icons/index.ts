@@ -1,0 +1,13 @@
+export { AndroidMinIcon } from "./AndroidMinIcon";
+export { AngularMinIcon } from "./AngularMinIcon";
+export { ExpressMinIcon } from "./ExpressMinIcon";
+export { IonicMinIcon } from "./IonicMinIcon";
+export { JavaMinIcon } from "./JavaMinIcon";
+export { JavascriptMinIcon } from "./JavascriptMinIcon";
+export { MongodbMinIcon } from "./MongodbMinIcon";
+export { NestMinIcon } from "./NestMinIcon";
+export { NodeMinIcon } from "./NodeMinIcon";
+export { PostgreMinIcon } from "./PostgreMinIcon";
+export { ReactMinIcon } from "./ReactMinIcon";
+export { SpringMinIcon } from "./SpringMinIcon";
+export { TypescriptMinIcon } from "./TypescriptMinIcon";
