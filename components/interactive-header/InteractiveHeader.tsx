@@ -7,8 +7,8 @@ const InteractiveHeader = () => {
   const [trails] = useTrail(1, {
     config: { mass: 100, tension: 2000, friction: 400 },
     opacity: 1,
-    x: 0,
-    from: { opacity: 0, x: 220 },
+    y: 0,
+    from: { opacity: 0, y: 220 },
   });
 
   return (
