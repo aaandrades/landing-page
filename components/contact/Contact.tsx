@@ -4,7 +4,12 @@ import styles from "./Contact.module.css";
 import Input from "../common/input/Input";
 import ReactCanvasConfetti from "react-canvas-confetti";
 import Loader from "../common/loader/Loader";
-import { Player } from "@lottiefiles/react-lottie-player";
+import dynamic from "next/dynamic";
+
+const Player = dynamic(
+  () => import("@lottiefiles/react-lottie-player").then((mod) => mod.Player),
+  { ssr: false }
+);
 import { HttpClient } from "../../helpers/Http.client";
 import MainActions from "../main-actions/MainActions";
 import { useFire } from "../../helpers/hooks/useFire";

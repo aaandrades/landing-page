@@ -19,7 +19,7 @@ const InteractiveHeader = () => {
         <span className={styles.title__name}> Andrés Andrade</span>
       </h1>
       <p className={styles.landing_paragraph}>
-        Software Engineer based in Toronto, Canada
+        Senior software engineer based in Toronto, Canada
       </p>
       <MainActions />
     </animated.div>
