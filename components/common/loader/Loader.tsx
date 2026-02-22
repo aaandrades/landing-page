@@ -4,7 +4,7 @@ import ReactDOM from "react-dom";
 import styles from "./Loader.module.css";
 import { ILoader } from "../../../interfaces/types";
 
-// Laoder using react portal
+// Loader using react portal
 const Loader = ({ show }: ILoader) => {
   const content = () => (
     <div className={styles.body}>
@@ -15,7 +15,7 @@ const Loader = ({ show }: ILoader) => {
   return show
     ? ReactDOM.createPortal(
         content(),
-        document.getElementById("modal-root") as Element
+        document?.getElementById("modal-root") as Element
       )
     : null;
 };

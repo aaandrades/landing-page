@@ -17,7 +17,7 @@ const MainActions = ({ social = false }: IMainActionsProps) => (
       </>
     )}
     <a
-      href="https://www.linkedin.com/in/andr%C3%A9s-andrade-51962b105/"
+      href="https://www.linkedin.com/in/andres-andrade-51962b105/"
       title="LinkedIn"
       target="blank"
       role="button"

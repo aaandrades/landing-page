@@ -1,7 +1,7 @@
 export const experiences = [
   {
     company: "Manulife",
-    title: "Frontend Software Engineer",
+    title: "Senior Software Engineer",
     description:
       "Developed financial and investment solutions with a focus on user experience and scalable architecture. Contributed to various projects aimed at enhancing customer interactions and improving system performance.",
     date: "2023 - Present",
@@ -27,7 +27,7 @@ export const experiences = [
   },
   {
     company: "Banco de Bogota",
-    title: "Software Engineer",
+    title: "Software Developer",
     description:
       "Developed a top-rated mobile banking application, emphasizing security, scalability, system design, and responsive design. Played a key role in creating a user-friendly and secure banking experience.",
     date: "2020 - 2021",
@@ -47,13 +47,6 @@ export const otherCompanies = [
     href: "https://www.triskelss.com/",
     width: 120,
     height: 40,
-  },
-  {
-    company: "Lonja nacional de propiedad raiz",
-    src: "/lonja.png",
-    href: "https://lonja-nacional.co/",
-    width: 120,
-    height: 38,
   },
 ];
 
